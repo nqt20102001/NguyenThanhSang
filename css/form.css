@@ -229,7 +229,7 @@ button.normal {
 
 /* ========== PAGINATION ========= */
 
-#pagination {
+/* #pagination {
     text-align: center;
 }
 
@@ -245,7 +245,7 @@ button.normal {
 #pagination a i{
     font-size: 16px;
     font-weight: 600;
-}
+} */
 
 /* =========== MODAL ============= */
 .modal.open {
@@ -560,7 +560,7 @@ footer .logo-main {
 #menu-wrapper .menu-main {
     display: flex;
     justify-content: space-between;
-    margin: 0 40px;
+    margin: 0 80px;
 }
 
 #menu-wrapper .menu-main li {
@@ -585,4 +585,34 @@ footer .logo-main {
 
 #cartt {
     display: none;
+}
+
+
+
+/* ==================== PAGINATION ============ */
+
+
+#pagination {
+    display: flex;
+    text-align: center;
+}
+
+#pagination div {
+    display: flex;
+    width: 100%;
+    text-align: center;
+}
+
+#pagination button {
+    text-decoration: none;
+    background-color: var(--color-primary);
+    padding: 15px 20px;
+    border-radius: 4px;
+    color: #fff;
+    font-weight: 600;
+}
+
+#pagination button i{
+    font-size: 16px;
+    font-weight: 600;
 }

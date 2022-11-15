@@ -71,6 +71,10 @@
     .modal-container {
 
     }
+
+    #menu-wrapper .menu-main {
+        margin: 0 30px;
+    }
 }
 
 @media (max-width: 648px) {
@@ -315,5 +319,9 @@
     #subtotal {
         width: 100%;
         padding: 20px;
+    }
+
+    #menu-wrapper .menu-main {
+        margin: 0 20px;
     }
 }
