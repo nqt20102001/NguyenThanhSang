@@ -161,7 +161,7 @@ const htmls = productsList.map((product,index)=>{
         <div class="modal">
             <div class="modal-container">
                 <div class="single-pro-img">
-                    <img src="${product.img}" style="width: 100%;" id="mainImg" alt="">
+                    <img src="${product.img}" style="width: 100%;" class="main-img" alt="">
                     <div class="sm-img-group">
                         <div class="sm-img-col">
                             <img src="${product.img}" style="width: 100%;" class="sm-img" alt="">
@@ -210,28 +210,88 @@ const htmls = productsList.map((product,index)=>{
 })
 document.querySelector("#shopp #product1 .pro-container").innerHTML = htmls.join("")
 
-
-
-// ======= CHANGE IMAGES SMALL IN MODAL =======
-var mainImg = document.getElementById('mainImg');
-var smallImg = document.getElementsByClassName("sm-img");
-const array = Object.keys(smallImg);
-
-smallImg[0].onclick = function(){
-    mainImg.src = smallImg[0].src;
-}
-smallImg[1].onclick = function(){
-    mainImg.src = smallImg[1].src;
-}
-smallImg[2].onclick = function(){
-    mainImg.src = smallImg[2].src;
-}
-smallImg[3].onclick = function(){
-    mainImg.src = smallImg[3].src;
+var mainImg = document.getElementsByClassName("main-img")
+var smallImg = document.getElementsByClassName("sm-img")
+var j = 0;
+for(let i = 0 ; i < smallImg.length - 1 ; i++){
+    
+    smallImg[i].onclick = function(){
+        if(i < 4) {
+            j = 0;
+        }
+        else{
+            j = Math.floor(i/4);
+        }
+        mainImg[j].src = smallImg[i].src;
+    }
 }
 
+// smallImg.forEach((item) => {
+//     item.onclick = () => {
+//         mainImg.src 
+//     }
+
+// })
 
 
+
+// smallImg[0].onclick = function(){
+//     mainImg[0].src = smallImg[0].src;
+// }
+
+// smallImg[1].onclick = function(){
+//     mainImg[0].src = smallImg[1].src;
+// }
+// smallImg[2].onclick = function(){
+//     mainImg[0].src = smallImg[2].src;
+// }
+// smallImg[3].onclick = function(){
+//     mainImg[0].src = smallImg[3].src;
+// }
+// smallImg[4].onclick = function(){
+//     mainImg[1].src = smallImg[4].src;
+// }
+
+// smallImg[5].onclick = function(){
+//     mainImg[1].src = smallImg[5].src;
+// }
+
+// smallImg[6].onclick = function(){
+//     mainImg[1].src = smallImg[6].src;
+// }
+
+// smallImg[7].onclick = function(){
+//     mainImg[1].src = smallImg[7].src;
+// }
+
+// smallImg[8].onclick = function(){
+//     mainImg[2].src = smallImg[8].src;
+// }
+
+// smallImg[9].onclick = function(){
+//     mainImg[2].src = smallImg[9].src;
+// }
+// smallImg[10].onclick = function(){
+//     mainImg[2].src = smallImg[10].src;
+// }
+// smallImg[11].onclick = function(){
+//     mainImg[2].src = smallImg[11].src;
+// }
+// smallImg[12].onclick = function(){
+//     mainImg[3].src = smallImg[12].src;
+// }
+
+// smallImg[13].onclick = function(){
+//     mainImg[3].src = smallImg[13].src;
+// }
+
+// smallImg[14].onclick = function(){
+//     mainImg[3].src = smallImg[14].src;
+// }
+
+// smallImg[15].onclick = function(){
+//     mainImg[3].src = smallImg[15].src;
+// }
 // ========= ADD PRODUCTS IN CART ==========
 const btnAddCarts = document.querySelectorAll("#btn-add-cart");
 
@@ -240,28 +300,32 @@ btnAddCarts.forEach(function(button, index) {
         var btnAddCart = event.target;
         var product = btnAddCart.parentElement;
         var productDetail = product.parentElement;
-        var productImg = productDetail.querySelector('#mainImg').src;
+        var productImg = productDetail.querySelector('.main-img').src;
         var productName = productDetail.querySelector('#name-product').innerText;
         var productPrice = productDetail.querySelector('#price-product').innerText;
 
         addCart(productImg, productName, productPrice);
     })
 })
-
 function addCart(productImg, productName, productPrice) {
     var addTr = document.createElement("tr");
-    var cartItems = document.querySelectorAll("#cart tbody tr");
-    
+    var cartItems = document.querySelectorAll("#cart table tbody tr td#name-product");
+
     for(var i = 0 ; i < cartItems.length; i++) {
-        var productItem = document.querySelectorAll("#name-product");
-        if(productItem[i].innerHTML == productName) {
-            console.log(productName);
-            var quantityProduct = cartItems[i].querySelector("#cart tbody tr input").value;
-            var quantityProducts = Number(quantityProduct);
-            console.log(quantityProducts.toString());
-            // quantityProducts += 1;
-            // alert("Sản phẩm đã có trong giỏ hàng!");
-        }
+        // var productItem = document.querySelectorAll("#name-product");
+
+        let existProduct = cartItems.find((item) => {
+            // item.name == productName;
+        })
+        console.log(existProduct);
+
+        // if(productItem[i].innerHTML == productName) {
+        //     var quantityProduct = cartItems[i].querySelector("#cart tbody tr input").value;
+        //     var quantityProducts = Number(quantityProduct);
+        //     console.log(quantityProducts.toString());
+        //     // quantityProducts += 1;
+        //     // alert("Sản phẩm đã có trong giỏ hàng!");
+        // }
     }
     var trContent = `
         <td><button id="remove-product"><i class="fa-sharp fa-solid fa-circle-xmark"></i></button></td>
