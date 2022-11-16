@@ -1,9 +1,8 @@
-
-var ccc = document.querySelector('.login')
-var loz = document.querySelector('.signup')
+var lg_wr = document.querySelector('.login')
+var su_wr = document.querySelector('.signup')
 
 function cc() {
-    ccc.style.visibility = "visible"
+    lg_wr.style.visibility = "visible"
 }
 
 document.querySelector('.login_wrapper').onclick = (e) => {
@@ -14,17 +13,17 @@ document.querySelector('.signup_wrapper').onclick = (e) => {
 }
 
 function xLogin() {
-    ccc.style.visibility = "hidden"
-    loz.style.visibility = "hidden"
+    lg_wr.style.visibility = "hidden"
+    su_wr.style.visibility = "hidden"
 }
 
-function lz() {
-    ccc.style.visibility = "hidden"
-    loz.style.visibility = "visible"
+function eLogin() {
+    lg_wr.style.visibility = "hidden"
+    su_wr.style.visibility = "visible"
 }
-function lzz() {
-    loz.style.visibility = "hidden"
-    ccc.style.visibility = "visible"
+function eSignup() {
+    su_wr.style.visibility = "hidden"
+    lg_wr.style.visibility = "visible"
 }
 
 
@@ -98,7 +97,7 @@ if (getUser) {
     let t1 = document.querySelector('.user')
     let t2 = document.querySelector('.logout')
     t1.innerHTML = `
-    <div style="color: pink;">
+    <div style="color: pink; font-size: 18px;">
         ${getUser}
     </div>
     `
@@ -109,6 +108,7 @@ if (getUser) {
         a {
           text-decoration: none;
           color: pink;
+          font-size: 18px;
           }
 
         a:hover {
