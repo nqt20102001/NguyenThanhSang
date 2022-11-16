@@ -125,6 +125,7 @@ small {
 
 .text-muted {
     color: var(--color-info-dark);
+    cursor: pointer;
 }
 
 .primary {

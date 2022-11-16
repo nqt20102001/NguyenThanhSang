@@ -127,3 +127,7 @@ logOutBtn.onclick = (e) => {
     dangXuat();
     document.location.reload();
 }
+
+function xAdmin() {
+    window.location.href = "index.html"
+}

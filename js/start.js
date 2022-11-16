@@ -74,7 +74,7 @@ document.querySelector('.dangNhap').innerHTML = `
         <div class="login_wrapper">
             <div class="login_mid">
                 <div class="wapper-heading">
-                    <h1>Login</h1>
+                    <h1>LOGIN</h1>
                 </div>
                 <form>
                     <div class="input__field">
@@ -87,10 +87,10 @@ document.querySelector('.dangNhap').innerHTML = `
                         <input id="password" type="password" placeholder="Password" />
                     </div>
                     <div style="display: flex; justify-content: end;">
-                        <a class="signup-link" onclick="eLogin()">Sign Up</a>
+                        <a class="signup-link" onclick="eLogin()">Đăng kí</a>
                     </div>
                     <div style="display: flex; justify-content: center;">
-                        <button class="btn btn-login">Login</button>
+                        <button class="btn btn-login">Đăng Nhập</button>
                     </div>
                 </form>
             </div>
@@ -101,7 +101,7 @@ document.querySelector('.dangNhap').innerHTML = `
         <div class="signup_wrapper">
             <div class="signup_mid">
                 <div class="wapper-heading">
-                    <h1>Sign Up</h1>
+                    <h1>SIGN UP</h1>
                 </div>
                 <form>
                     <div class="input__field">
@@ -117,10 +117,10 @@ document.querySelector('.dangNhap').innerHTML = `
                         <input id="password_signup" type="password" placeholder="Confirm Password" />
                     </div>
                     <div style="display: flex; justify-content: end;">
-                        <a class="login-link" onclick="eSignup()">Login</a>
+                        <a class="login-link" onclick="eSignup()">Đăng nhập</a>
                     </div>
                     <div style="display: flex; justify-content: center;">
-                        <button class="btn btn-signup">Sign Up</button>
+                        <button class="btn btn-signup">Đăng Kí</button>
                     </div>
                 </form>
             </div>
