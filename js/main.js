@@ -210,22 +210,20 @@ const htmls = productsList.map((product,index)=>{
 })
 document.querySelector("#shopp #product1 .pro-container").innerHTML = htmls.join("")
 
-// ======= CHANGE SMALL IMG IN MODAL ========
-var mainImg = document.getElementsByClassName("main-img")
-var smallImg = document.getElementsByClassName("sm-img")
+
+
+// ======= CHANGE IMAGES SMALL IN MODAL =======
+var mainImg = document.getElementsByClassName("main-img");
+var smallImg = document.getElementsByClassName("sm-img");
+
 var j = 0;
-for(let i = 0 ; i < smallImg.length - 1 ; i++){
-    
+for(let i = 0 ; i < smallImg.length; i++){
     smallImg[i].onclick = function(){
-        if(i < 4) {
-            j = 0;
-        }
-        else{
-            j = Math.floor(i/4);
-        }
+        j = Math.floor(i/4);
         mainImg[j].src = smallImg[i].src;
     }
 }
+
 
 
 // ========= ADD PRODUCTS IN CART ==========
@@ -243,25 +241,21 @@ btnAddCarts.forEach(function(button, index) {
         addCart(productImg, productName, productPrice);
     })
 })
+
 function addCart(productImg, productName, productPrice) {
     var addTr = document.createElement("tr");
-    var cartItems = document.querySelectorAll("#cart table tbody tr td#name-product");
-
+    var cartItems = document.querySelectorAll("#cart tbody tr");
+    
     for(var i = 0 ; i < cartItems.length; i++) {
-        // var productItem = document.querySelectorAll("#name-product");
-
-        let existProduct = cartItems.find((item) => {
-            // item.name == productName;
-        })
-        console.log(existProduct);
-
-        // if(productItem[i].innerHTML == productName) {
-        //     var quantityProduct = cartItems[i].querySelector("#cart tbody tr input").value;
-        //     var quantityProducts = Number(quantityProduct);
-        //     console.log(quantityProducts.toString());
-        //     // quantityProducts += 1;
-        //     // alert("Sản phẩm đã có trong giỏ hàng!");
-        // }
+        var productItem = document.querySelectorAll("#name-product");
+        if(productItem[i].innerHTML == productName) {
+            // console.log(productName);
+            // var quantityProduct = cartItems[i].querySelector("#cart tbody tr input").value;
+            // var quantityProducts = Number(quantityProduct);
+            // console.log(quantityProducts.toString());
+            // quantityProducts += 1;
+            alert("Sản phẩm đã có trong giỏ hàng!");    
+        }
     }
     var trContent = `
         <td><button id="remove-product"><i class="fa-sharp fa-solid fa-circle-xmark"></i></button></td>
@@ -301,3 +295,81 @@ function deleteCart() {
     }
 }
 
+
+// =========== PAGINATION =========
+// function pages(current_page, last_page, onSides = 3) {
+//     // pages
+//     let pages = [];
+//     // Loop through
+//     for (let i = 1; i <= last_page; i++) {
+//         // Define offset
+//         let offset = (i == 1 || last_page) ? onSides + 1 : onSides;
+//         // If added
+//         if (i == 1 || (current_page - offset <= i && current_page + offset >= i) || 
+//             i == current_page || i == last_page) {
+//             pages.push(i);
+//         } else if (i == current_page - (offset + 1) || i == current_page + (offset + 1)) {
+//             pages.push('...');
+//         }
+//     }
+//     return pages;
+// // }
+
+
+// var productsList
+// if (localStorage.getItem('product') === null) {
+//     console.log("day du lieu len");
+//     productList = [
+//         { img: "img/non_1.png", id: "shirt", price: "100", name: "sp-1" },
+//         { img: "img/non_2.png", id: "shirt", price: "50", name: "sp-2" },
+//         { img: "img/non_3.png", id: "shirt", price: "100", name: "sp-3" },
+//         { img: "img/non_4.png", id: "shoes", price: "50", name: "sp-4" },
+//         { img: "img/non_5.png", id: "shoes", price: "100", name: "sp-5" },
+//         { img: "img/non_6.png", id: "shoes", price: "50", name: "sp-6" },
+//     ];
+//     localStorage.setItem('product', JSON.stringify(productList));
+// }
+// productList = JSON.parse(localStorage.getItem('product'))
+
+// let perPage = 6
+// let start = 0
+// let end = perPage
+
+// const btnNext = document.getElementById("next-btn");
+// const btnPrev = document.getElementById("prev-btn);
+// var currentPage = 1
+
+// function getCurrentPage(currentPage) {
+//     start = (currentPage - 1) * perPage
+//     end = currentPage * perPage
+// }
+// function inRa() {
+//     let listProduct = ""
+//     productList.map((item, index) => {
+
+//         if (index >= start && index < end) {
+//             listProduct += `
+//             <li class="element_product" id="`+ item.id + `">
+//                 <div class="mid-2--img both">
+//                     <div class="both-top" onclick="detailProduct(this)">
+//                         <span class="both-top--img"><img src="`+ item.img + `" alt=""></span>
+//                         <a class="both-top--muaNgay">SẢN PHẨM</a>
+//                     </div>
+//                     <div class="both-bot">
+//                         <div class="both-bot--name">
+//                             <h2 class="name_item">`+ item.name + `</h2>
+//                         </div>
+//                         <div class="price_item">`+ item.price + `</div>
+//                     </div>
+//                 </div>
+//                 <span id="detail"></span>
+//             </li>
+//             `
+//         }
+//         document.getElementById('pagination').innerHTML = listProduct
+//     })
+
+// }
+// totalPages = Math.ceil(productList.length / perPage);
+// renderListPage(totalPages)
+// inRa()

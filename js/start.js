@@ -17,7 +17,6 @@ document.querySelector('#header').innerHTML = `
     <link rel="stylesheet" href="./css/admin.responsive.css">
     <link rel="stylesheet" href="./css/form.css">
     <link rel="stylesheet" href="./css/form.responsive.css">
-    <link rel="stylesheet" href="./css/validator.css">
 
     <div class="logo-main">
         <a href="#" class="logo">

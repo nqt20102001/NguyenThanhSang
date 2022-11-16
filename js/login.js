@@ -103,18 +103,18 @@ if (getUser) {
     `
     t2.innerHTML = `
     <div style="margin-right: 22px;">
-      <a href="">Đăng xuất</a>
-      <style>
-        a {
-          text-decoration: none;
-          color: pink;
-          font-size: 18px;
-          }
-
-        a:hover {
-          color: black;
+    <a href="">Đăng xuất</a>
+    <style>
+    a {
+        text-decoration: none;
+        color: pink;
+        font-size: 18px;
         }
-      </style>
+
+    a:hover {
+        color: black;
+    }
+    </style>
     </div>
     `
 }
