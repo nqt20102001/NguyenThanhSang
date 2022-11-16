@@ -210,6 +210,7 @@ const htmls = productsList.map((product,index)=>{
 })
 document.querySelector("#shopp #product1 .pro-container").innerHTML = htmls.join("")
 
+// ======= CHANGE SMALL IMG IN MODAL ========
 var mainImg = document.getElementsByClassName("main-img")
 var smallImg = document.getElementsByClassName("sm-img")
 var j = 0;
@@ -226,72 +227,7 @@ for(let i = 0 ; i < smallImg.length - 1 ; i++){
     }
 }
 
-// smallImg.forEach((item) => {
-//     item.onclick = () => {
-//         mainImg.src 
-//     }
 
-// })
-
-
-
-// smallImg[0].onclick = function(){
-//     mainImg[0].src = smallImg[0].src;
-// }
-
-// smallImg[1].onclick = function(){
-//     mainImg[0].src = smallImg[1].src;
-// }
-// smallImg[2].onclick = function(){
-//     mainImg[0].src = smallImg[2].src;
-// }
-// smallImg[3].onclick = function(){
-//     mainImg[0].src = smallImg[3].src;
-// }
-// smallImg[4].onclick = function(){
-//     mainImg[1].src = smallImg[4].src;
-// }
-
-// smallImg[5].onclick = function(){
-//     mainImg[1].src = smallImg[5].src;
-// }
-
-// smallImg[6].onclick = function(){
-//     mainImg[1].src = smallImg[6].src;
-// }
-
-// smallImg[7].onclick = function(){
-//     mainImg[1].src = smallImg[7].src;
-// }
-
-// smallImg[8].onclick = function(){
-//     mainImg[2].src = smallImg[8].src;
-// }
-
-// smallImg[9].onclick = function(){
-//     mainImg[2].src = smallImg[9].src;
-// }
-// smallImg[10].onclick = function(){
-//     mainImg[2].src = smallImg[10].src;
-// }
-// smallImg[11].onclick = function(){
-//     mainImg[2].src = smallImg[11].src;
-// }
-// smallImg[12].onclick = function(){
-//     mainImg[3].src = smallImg[12].src;
-// }
-
-// smallImg[13].onclick = function(){
-//     mainImg[3].src = smallImg[13].src;
-// }
-
-// smallImg[14].onclick = function(){
-//     mainImg[3].src = smallImg[14].src;
-// }
-
-// smallImg[15].onclick = function(){
-//     mainImg[3].src = smallImg[15].src;
-// }
 // ========= ADD PRODUCTS IN CART ==========
 const btnAddCarts = document.querySelectorAll("#btn-add-cart");
 
@@ -365,81 +301,3 @@ function deleteCart() {
     }
 }
 
-
-// =========== PAGINATION =========
-// function pages(current_page, last_page, onSides = 3) {
-//     // pages
-//     let pages = [];
-//     // Loop through
-//     for (let i = 1; i <= last_page; i++) {
-//         // Define offset
-//         let offset = (i == 1 || last_page) ? onSides + 1 : onSides;
-//         // If added
-//         if (i == 1 || (current_page - offset <= i && current_page + offset >= i) || 
-//             i == current_page || i == last_page) {
-//             pages.push(i);
-//         } else if (i == current_page - (offset + 1) || i == current_page + (offset + 1)) {
-//             pages.push('...');
-//         }
-//     }
-//     return pages;
-// // }
-
-
-// var productsList
-// if (localStorage.getItem('product') === null) {
-//     console.log("day du lieu len");
-//     productList = [
-//         { img: "img/non_1.png", id: "shirt", price: "100", name: "sp-1" },
-//         { img: "img/non_2.png", id: "shirt", price: "50", name: "sp-2" },
-//         { img: "img/non_3.png", id: "shirt", price: "100", name: "sp-3" },
-//         { img: "img/non_4.png", id: "shoes", price: "50", name: "sp-4" },
-//         { img: "img/non_5.png", id: "shoes", price: "100", name: "sp-5" },
-//         { img: "img/non_6.png", id: "shoes", price: "50", name: "sp-6" },
-//     ];
-//     localStorage.setItem('product', JSON.stringify(productList));
-// }
-// productList = JSON.parse(localStorage.getItem('product'))
-
-// let perPage = 6
-// let start = 0
-// let end = perPage
-
-// const btnNext = document.getElementById("next-btn");
-// const btnPrev = document.getElementById("prev-btn);
-// var currentPage = 1
-
-// function getCurrentPage(currentPage) {
-//     start = (currentPage - 1) * perPage
-//     end = currentPage * perPage
-// }
-// function inRa() {
-//     let listProduct = ""
-//     productList.map((item, index) => {
-
-//         if (index >= start && index < end) {
-//             listProduct += `
-//             <li class="element_product" id="`+ item.id + `">
-//                 <div class="mid-2--img both">
-//                     <div class="both-top" onclick="detailProduct(this)">
-//                         <span class="both-top--img"><img src="`+ item.img + `" alt=""></span>
-//                         <a class="both-top--muaNgay">SẢN PHẨM</a>
-//                     </div>
-//                     <div class="both-bot">
-//                         <div class="both-bot--name">
-//                             <h2 class="name_item">`+ item.name + `</h2>
-//                         </div>
-//                         <div class="price_item">`+ item.price + `</div>
-//                     </div>
-//                 </div>
-//                 <span id="detail"></span>
-//             </li>
-//             `
-//         }
-//         document.getElementById('pagination').innerHTML = listProduct
-//     })
-
-// }
-// totalPages = Math.ceil(productList.length / perPage);
-// renderListPage(totalPages)
-// inRa()
