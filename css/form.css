@@ -157,6 +157,7 @@ button.normal {
     gap: 40px;
     z-index: 10;
 }
+
 #product1 h2 {
     font-size: 1.8rem;
 }
@@ -244,11 +245,11 @@ button.normal {
     display: none;
 }
 
-input[name="product"]{
+input[name="product"] {
     display: none;
 }
 
-input[name="product"]:checked + .modal{
+input[name="product"]:checked+.modal {
     display: flex;
     z-index: 10;
 }
@@ -272,7 +273,7 @@ input[name="product"]:checked + .modal{
     background: var(--color-background);
     animation: modalFadeIn ease .5s;
     display: flex;
-    box-shadow: 5px 5px 10px rgb(0,0,0,.2);
+    box-shadow: 5px 5px 10px rgb(0, 0, 0, .2);
 }
 
 @keyframes modalFadeIn {
@@ -280,6 +281,7 @@ input[name="product"]:checked + .modal{
         transform: translateY(-140px);
         opacity: 0;
     }
+
     to {
         transform: translateY(0);
         opacity: 1;
@@ -387,7 +389,7 @@ input[name="product"]:checked + .modal{
 }
 
 #cart table td:nth-child(4),
-#cart table td:nth-child(5){
+#cart table td:nth-child(5) {
     width: 20%;
     text-align: center;
 }
@@ -466,6 +468,7 @@ input[name="product"]:checked + .modal{
 /* ============== FOOTER ============== */
 
 footer {
+    border-top: 1px solid #ccc;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -514,7 +517,7 @@ footer .install img {
     border: 1px solid #ccc;
 }
 
-footer .install .row img{
+footer .install .row img {
     border: 1px solid var(--color-primary);
     border-radius: 6px;
 }
@@ -534,22 +537,22 @@ footer .logo-main {
 #menu-wrapper {
     border-bottom: 1px solid #ccc;
     border-top: 1px solid #ccc;
-
+    margin-top: 50px;
 }
 
 #menu-wrapper .menu-main {
     display: flex;
-    justify-content: space-between;
-    margin: 0 80px;
+    justify-content: center;
 }
 
 #menu-wrapper .menu-main li {
-    padding: 10px;
+    padding: 16px;
     cursor: pointer;
     font-size: 1rem;
     font-weight: 500;
     color: #474748;
     position: relative;
+    margin-left: 100px;
 }
 
 #menu-wrapper .menu-main li:hover,
@@ -565,34 +568,4 @@ footer .logo-main {
 
 #cartt {
     display: none;
-}
-
-
-
-/* ==================== PAGINATION ============ */
-
-
-#pagination {
-    display: flex;
-    text-align: center;
-}
-
-#pagination div {
-    display: flex;
-    width: 100%;
-    text-align: center;
-}
-
-#pagination button {
-    text-decoration: none;
-    background-color: var(--color-primary);
-    padding: 15px 20px;
-    border-radius: 4px;
-    color: #fff;
-    font-weight: 600;
-}
-
-#pagination button i{
-    font-size: 16px;
-    font-weight: 600;
 }

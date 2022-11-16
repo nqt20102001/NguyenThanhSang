@@ -127,3 +127,82 @@ document.querySelector('.dangNhap').innerHTML = `
     </div>
     <link rel="stylesheet" href="./css/login.css">
     `
+
+document.querySelector('.modal').innerHTML = `
+    <div class="modal-container"></div>
+    `
+
+document.querySelector('.ft').innerHTML = `
+    <div class="logo-main">
+            <a href="#" class="logo">
+                <img src="./img/logo.png" alt="">
+                <h2>EGA<span>TOR</span></h2>
+            </a>
+        </div>
+        <div class="col">
+
+            <h4>CONTACT</h4>
+            <p><strong>Address:</strong> 273 An Dương Vương, Phường 3, Quận 5, TP. Hồ Chí Minh</p>
+            <p><strong>Phone:</strong> 0867804787</p>
+            <p><strong>Hours:</strong> 10:00 - 20:00</p>
+
+            <div class="follow">
+                <h4>FOLLOW US</h4>
+                <div class="icon">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-instagram"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-brands fa-linkedin-in"></i>
+                    <i class="fa-brands fa-youtube"></i>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="col">
+            <h4>MY ACCOUNT</h4>
+            <a href="#">Sign in</a>
+            <a href="">View cart</a>
+            <a href="">My wishlist</a>
+        </div>
+
+        <div class="col install">
+            <h4>INSTALL APP</h4>
+            <p>Form App Store or Google Play</p>
+            <div class="row">
+                <img src="/img/pay/app.jpg" alt="">
+                <img src="/img/pay/play.jpg" alt="">
+            </div>
+        </div>
+
+        <div class="copyright">
+            <p>Designed by Tuan & Toan Copyright © 2021</p>
+        </div>`
+
+document.querySelector('head').innerHTML = `
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Store</title>`
+
+document.querySelector('#menu-wrapper').innerHTML = `
+    <ul class="menu-main">
+        <li id="btn-alls" class="active">ALL</li>
+        <li id="btn-tshirts">TSHIRT</li>
+        <li id="btn-hoodies">HOODIE</li>
+        <li id="btn-sweaters">SWEATER</li>
+    </ul>`
+
+document.querySelector('#shopp').innerHTML = `
+    <section id="product1" class="section-p1" style="text-align: center;">
+        <div class="pro-container">
+            <!-- LIST ITEM
+            <div class="pro">
+                <img>
+                <div class="des">
+                    <h4 id="name-product">$Name$</h4>
+                    <h5 id="price-product">$Price$</h5>
+                </div>
+            </div> -->
+        </div>
+    </section>`
