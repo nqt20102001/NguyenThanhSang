@@ -1,17 +1,17 @@
-import {tshitsList, hoodiesList, sweatersList, productsList} from "./productList.js";
+import { tshitsList, hoodiesList, sweatersList, productsList } from "./productList.js";
 
 // ======== OPEN NAVBAR IN MOBILE =========
 const bar = document.getElementById('bar');
 const nav = document.getElementById('navbar');
 const close = document.getElementById('close');
 
-if(bar) {
+if (bar) {
     bar.addEventListener('click', () => {
         nav.classList.add('active');
     })
 }
 
-if(close) {
+if (close) {
     close.addEventListener('click', () => {
         nav.classList.remove('active');
     })
@@ -19,8 +19,8 @@ if(close) {
 
 // ======= ACTIVE BUTTON NAVBAR =========
 const tabs = document.querySelectorAll("#navbar li button");
-tabs.forEach(tab=>{
-    tab.onclick =()=>{
+tabs.forEach(tab => {
+    tab.onclick = () => {
         document.querySelector("#navbar li button.active").classList.remove("active");
         tab.classList.add("active");
     }
@@ -30,7 +30,7 @@ tabs.forEach(tab=>{
 // ======= ACTIVE BUTTON MENU =========
 const menus = document.querySelectorAll("#menu-wrapper ul li")
 menus.forEach(menu => {
-    menu.onclick= () => {
+    menu.onclick = () => {
         document.querySelector("#menu-wrapper ul li.active").classList.remove("active");
         menu.classList.add("active");
     }
@@ -153,9 +153,8 @@ const Orders = [
 
 
 // ======= OPEN MODAL (DETAILS PRODUCT) =======
-const htmls = productsList.map((product,index)=>{
-    
-    return`
+const htmls = productsList.map((product, index) => {
+    return `
     <div>
         <input type="checkbox" name="product" id="p${index}"/>
         <div class="modal">
@@ -217,9 +216,9 @@ var mainImg = document.getElementsByClassName("main-img");
 var smallImg = document.getElementsByClassName("sm-img");
 
 var j = 0;
-for(let i = 0 ; i < smallImg.length; i++){
-    smallImg[i].onclick = function(){
-        j = Math.floor(i/4);
+for (let i = 0; i < smallImg.length; i++) {
+    smallImg[i].onclick = function () {
+        j = Math.floor(i / 4);
         mainImg[j].src = smallImg[i].src;
     }
 }
@@ -229,8 +228,8 @@ for(let i = 0 ; i < smallImg.length; i++){
 // ========= ADD PRODUCTS IN CART ==========
 const btnAddCarts = document.querySelectorAll("#btn-add-cart");
 
-btnAddCarts.forEach(function(button, index) {
-    button.addEventListener('click', function(event) {
+btnAddCarts.forEach(function (button, index) {
+    button.addEventListener('click', function (event) {
         var btnAddCart = event.target;
         var product = btnAddCart.parentElement;
         var productDetail = product.parentElement;
@@ -245,16 +244,16 @@ btnAddCarts.forEach(function(button, index) {
 function addCart(productImg, productName, productPrice) {
     var addTr = document.createElement("tr");
     var cartItems = document.querySelectorAll("#cart tbody tr");
-    
-    for(var i = 0 ; i < cartItems.length; i++) {
+
+    for (var i = 0; i < cartItems.length; i++) {
         var productItem = document.querySelectorAll("#name-product");
-        if(productItem[i].innerHTML == productName) {
+        if (productItem[i].innerHTML == productName) {
             // console.log(productName);
             // var quantityProduct = cartItems[i].querySelector("#cart tbody tr input").value;
             // var quantityProducts = Number(quantityProduct);
             // console.log(quantityProducts.toString());
             // quantityProducts += 1;
-            alert("Sản phẩm đã có trong giỏ hàng!");    
+            alert("Sản phẩm đã có trong giỏ hàng!");
         }
     }
     var trContent = `
@@ -276,10 +275,10 @@ function cartToTal() {
     var cartItems = document.querySelectorAll("#cart tbody tr");
     var totalPrice = 0;
 
-    for(var i = 0 ; i < cartItems.length; i++){
+    for (var i = 0; i < cartItems.length; i++) {
         var inputValue = cartItems[i].querySelector("#cart tbody tr input").value;
         var productPrice = cartItems[i].querySelector("#price-product").innerText;
-        var total = (inputValue*productPrice)*1000;
+        var total = (inputValue * productPrice) * 1000;
         totalPrice += total;
     }
 
@@ -290,8 +289,8 @@ function cartToTal() {
 
 // ======= DELETE PRODUCT IN CART ==========
 function deleteCart() {
-    for(var i = 0 ; i < cartItems.length; i++) {
-        
+    for (var i = 0; i < cartItems.length; i++) {
+
     }
 }
 
@@ -305,7 +304,7 @@ function deleteCart() {
 //         // Define offset
 //         let offset = (i == 1 || last_page) ? onSides + 1 : onSides;
 //         // If added
-//         if (i == 1 || (current_page - offset <= i && current_page + offset >= i) || 
+//         if (i == 1 || (current_page - offset <= i && current_page + offset >= i) ||
 //             i == current_page || i == last_page) {
 //             pages.push(i);
 //         } else if (i == current_page - (offset + 1) || i == current_page + (offset + 1)) {

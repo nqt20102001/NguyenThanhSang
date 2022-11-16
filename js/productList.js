@@ -152,7 +152,7 @@ const hoodiesList = [
         id: "hd0",
         name: "LEVENTS® DORAEMON",
         price: 680.000,
-        img: "./img/hoodies/1.1",
+        img: "./img/hoodies/1.1.jpg",
         img2: "./img/hoodie/1.2.jpg",
         img3: "./img/hoodies/1.3.jpg",
         img4: "./img/hoodies/1.4.jpg",
@@ -517,4 +517,4 @@ const productsList = [
     },
 ]
 
-export  {tshitsList,hoodiesList, sweatersList, productsList}
+export { tshitsList, hoodiesList, sweatersList, productsList }
