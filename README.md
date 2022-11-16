@@ -1,2 +1,0 @@
-﻿# up len di cc
- 
