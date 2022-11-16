@@ -64,94 +64,6 @@ btnCartMobile.addEventListener('click', () => {
 })
 
 
-// ======= CHANGE THEMES IN ADMIN PAGES =======
-// const sideMenu = document.querySelector("aside")
-// const menuBtn = document.querySelector("#menu-btn")
-// const closeBtn = document.querySelector("#close-btn")
-
-// const themeToggler = document.querySelector(".theme-toggler")
-
-// // show sidebar
-// menuBtn.addEventListener('click', () => {
-//     sideMenu.style.display = 'block';
-// })
-
-// closeBtn.addEventListener('click', () => {
-//     sideMenu.style.display = 'none';
-// })
-
-// // change theme
-// themeToggler.addEventListener('click', () => {
-//     document.body.classList.toggle('dark-theme-variables');
-
-//     themeToggler.querySelector('span:nth-child(1)').classList.toggle('active');
-//     themeToggler.querySelector('span:nth-child(2)').classList.toggle('active');
-// })
-
-// ======= FILL ORDERS IN TABLE (ADMIN PAGES) =======
-
-// Orders.forEach(order => {
-//     const tr = document.createElement('tr');
-//     const trContent = `
-//                     <td>${order.productName}</td>
-//                     <td>${order.productNumber}</td>
-//                     <td>${order.paymentStatus}</td>
-//                     <td class="${order.shipping === 'Declined' ? 'danger' : order.shipping === 'pending' ? 'warning' : 'primary'}">${order.shipping}
-//                     </td>
-//                     <td class="primary">Details</td>
-//                     `;
-//     tr.innerHTML = trContent;
-//     document.querySelector('table tbody').appendChild(tr);
-// });
-
-
-
-const Orders = [
-    {
-        productName: 'Foldable Mini Drone',
-        productNumber: '123',
-        paymentStatus: 'Due',
-        shipping: 'Pending'
-    },
-    {
-        productName: 'LARVENDER KF102 Drone',
-        productNumber: '7543',
-        paymentStatus: 'Refunded',
-        shipping: 'Declined'
-    },
-    {
-        productName: 'Ruko F11 Pro Drone',
-        productNumber: '5673',
-        paymentStatus: 'Due',
-        shipping: 'Pending'
-    },
-    {
-        productName: 'Drone with Camera Drone',
-        productNumber: '54545',
-        paymentStatus: 'Paid',
-        shipping: 'Delivered'
-    },
-    {
-        productName: 'GPS 4k Drone',
-        productNumber: '123133',
-        paymentStatus: 'Paid',
-        shipping: 'Delivered'
-    },
-    {
-        productName: 'DJI Air 25',
-        productNumber: '6223',
-        paymentStatus: 'Due',
-        shipping: 'Pending'
-    },
-    {
-        productName: 'Lozenge Drone',
-        productNumber: '15523',
-        paymentStatus: 'Due',
-        shipping: 'Delivered'
-    }
-];
-
-
 // ======= OPEN MODAL (DETAILS PRODUCT) =======
 const htmls = productsList.map((product, index) => {
     return `
@@ -181,13 +93,6 @@ const htmls = productsList.map((product, index) => {
                     <h6>Home / T - Shirst</h6>
                     <h4 id="name-product">${product.name}</h4>
                     <h5 id="price-product">${product.price}.000</h5>
-                    <select>
-                        <option>Select Sizes</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
                     <input type="number" value="1">
                     <button class="normal" id="btn-add-cart">Add to cart</button>
                 </div>
@@ -257,11 +162,12 @@ function addCart(productImg, productName, productPrice) {
         }
     }
     var trContent = `
-        <td><button id="remove-product"><i class="fa-sharp fa-solid fa-circle-xmark"></i></button></td>
         <td><img src="${productImg}" alt=""></td>
         <td id="name-product" style="font-weight: 600;">${productName}</td>
         <td id="price-product">${productPrice}</td>
         <td><input type="number" value="1"></td>
+        <td><button id="remove-product"><i class="fa-sharp fa-solid fa-circle-xmark"></i></button></td>
+
     `
     addTr.innerHTML = trContent;
     var cartTable = document.querySelector("tbody");

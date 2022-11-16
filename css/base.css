@@ -59,14 +59,6 @@ body {
     overflow-x: hidden;
 }
 
-.container {
-    display: grid;
-    width: 96%;
-    margin: 0 auto;
-    gap: 1.8rem;
-    grid-template-columns: 14rem auto 23rem;
-}
-
 a {
     color: var(--color-dark);
 }
@@ -114,13 +106,6 @@ b {
 
 small {
     font-size: 0.75rem;
-}
-
-.profile-photo {
-    width: 2.8rem;
-    height: 2.8rem;
-    border-radius: 50%;
-    overflow: hidden;
 }
 
 .text-muted {

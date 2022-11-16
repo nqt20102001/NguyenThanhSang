@@ -28,7 +28,7 @@ button.normal {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 18px 38px;
+    padding: 14px 38px;
     background: #f6f6f9;
     box-shadow: 0 5px 15px rgba(0, 0, 0, .2);
     z-index: 999;
@@ -371,31 +371,32 @@ input[name="product"]:checked+.modal {
 
 #cart table img {
     width: 70px;
+    margin: auto;
 }
 
 #cart table td:nth-child(1) {
-    width: 10%;
+    width: 20%;
     text-align: center;
 }
 
 #cart table td:nth-child(2) {
-    width: 20%;
-    text-align: center;
-}
-
-#cart table td:nth-child(3) {
     width: 30%;
     text-align: center;
 }
 
-#cart table td:nth-child(4),
 #cart table td:nth-child(5) {
+    width: 10%;
+    text-align: center;
+}
+
+#cart table td:nth-child(3),
+#cart table td:nth-child(4){
     width: 20%;
     text-align: center;
 }
 
-#cart table td:nth-child(5) input {
-    width: 70px;
+#cart table td:nth-child(4) input {
+    width: 50px;
     padding: 10px 5px 10px 15px;
 }
 

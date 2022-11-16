@@ -1,10 +1,8 @@
 
 @media screen and (max-width: 1200px){
     .container {
-        width: 94%;
-        grid-template-columns: 7rem auto 23rem;
+        grid-template-columns: 80px auto;
     }
-
     aside .logo h2,
     aside .sidebar h3 {
         display: none;
@@ -19,29 +17,12 @@
         margin-top: 1.8rem;
     }
 
-    main .insights {
-        grid-template-columns: 1fr;
-        gap: 0;
-    }
-
-    main .recent-orders {
-        width: 94%;
-        position: absolute;
-        left: 50%;
-        transform: translate(-50%);
-        margin: 2rem 0 0 8.8rem;
-    }
-
-    main .recent-orders table {
-        width: 83vw;
-    }
-
-    main table thead tr th:last-child,
+    /* main table thead tr th:last-child,
     main table thead tr th:first-child,
     main table tbody tr td:last-child,
     main table tbody tr td:first-child {
         display: none;
-    }
+    } */
 }
 
 @media screen and (max-width: 768px) {
@@ -56,7 +37,7 @@
         background: var(--color-white);
         width: 18rem;
         z-index: 3;
-        box-shadow: 1rem 3rem 4rem var(--color-white);
+        box-shadow: 1rem 3rem 4rem rgba(0, 0, 0, .2);
         height: 100vh;
         padding-right: var(--card-padding);
         display: none;
@@ -96,27 +77,16 @@
     }
 
     main {
-        margin-top: 8rem;
+        margin-top: 2rem;
         padding: 0 1rem;
     }
 
-    main .recent-orders {
-        position: relative;
-        margin: 3rem 0 0 0;
-        width: 100%;
-    }
-
-    main .recent-orders table {
-        width: 100%;
-        margin: 0;
-    }
-
-    .right {
+    .top {
         width: 94%;
         margin: 0 auto 4rem;
     }
 
-    .right .top {
+    .top .right {
         position: fixed;
         top: 0;
         left: 0;
@@ -130,17 +100,17 @@
         box-shadow: 0 1rem 1rem var(--color-light);
     }
 
-    .right .top .theme-toggler {
+    .top .right .theme-toggler {
         width: 4.4rem;
         position: absolute;
         left: 66%;
     }
 
-    .right .profile .info {
+    .top .profile .info {
         display: none;
     }
 
-    .right .top button {
+    .top .right button {
         display: inline-block;
         background: transparent;
         cursor: pointer;
@@ -150,7 +120,79 @@
         font-size: 2rem;
     }
 
-    .right .top button span {
+    .top .right button span {
         font-size: 2rem;
+    }
+
+    #cart-admin table td:nth-child(1) {
+        width: 20%;
+    }
+    
+    #cart-admin table td:nth-child(2) {
+        width: 40%;
+    }
+
+    #cart-admin table td:nth-child(3) {
+        width: 20%;
+    }
+    
+    #cart-admin table td:nth-child(4)
+    {
+        width: 10%;
+    }
+    
+    #cart-admin table td:nth-child(5)
+    {
+        width: 10%;
+    }
+}
+
+@media screen and (max-width: 648px) {
+    #cart-admin table td:nth-child(1) {
+        width: 20%;
+    }
+    
+    #cart-admin table td:nth-child(2) {
+        width: 30%;
+    }
+
+    #cart-admin table tbody td:nth-child(2) {
+        padding-left: 5px;
+        text-align: start;
+    }
+    
+    #cart-admin table td:nth-child(3) {
+        width: 20%;
+    }
+    
+    #cart-admin table td:nth-child(4)
+    {
+        width: 15%;
+    }
+    
+    #cart-admin table td:nth-child(5)
+    {
+        width: 15%;
+    }
+}
+
+@media screen and (max-width: 477px) {
+    main {
+        padding: 0;
+    }
+
+    #cart-admin table img {
+        width: 60px;
+    }
+
+    #cart-admin table thead td {
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 12px 0;
+        font-size: .8rem;
+    }
+
+    #cart-admin table tbody td {
+        font-size: .8rem;
     }
 }
