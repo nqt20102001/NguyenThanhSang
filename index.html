@@ -30,7 +30,7 @@
 </head>
 
 <body>
-    
+
     <section id="header">
         <div class="logo-main">
             <a href="#" class="logo">
@@ -314,67 +314,59 @@
     }); 
 </script>-->
 
-    <div class="form">
-        <div class="login" id="my-login">
-            <div class="login_wrapper">
-                <div class="login_top">
-                    <a>&times;</a>
+    <div class="login" id="my-login" onclick="xLogin()">
+        <div class="login_wrapper">
+            <div class="login_mid">
+                <div class="wapper-heading">
+                    <h1>Login</h1>
                 </div>
-                <div class="login_mid">
-                    <div class="wapper-heading">
-                        <h1>Login</h1>
+                <form>
+                    <div class="input__field">
+                        <input id="email" type="text" placeholder="Email" />
                     </div>
-                    <form>
-                        <div class="input__field">
-                            <input id="email" type="text" placeholder="Email" />
-                        </div>
-                        <div class="input__field">
-                            <input id="username" type="text" placeholder="User Name" />
-                        </div>
-                        <div class="input__field">
-                            <input id="password" type="password" placeholder="Password" />
-                        </div>
-                        <div style="display: flex; justify-content: end;">
-                            <a class="signup-link" onclick="lz()">Sign Up</a>
-                        </div>
-                        <div style="display: flex; justify-content: center;">
-                            <button class="btn btn-login">Login</button>
-                        </div>
-                    </form>
-                </div>
+                    <div class="input__field">
+                        <input id="username" type="text" placeholder="User Name" />
+                    </div>
+                    <div class="input__field">
+                        <input id="password" type="password" placeholder="Password" />
+                    </div>
+                    <div style="display: flex; justify-content: end;">
+                        <a class="signup-link" onclick="lz()">Sign Up</a>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <button class="btn btn-login">Login</button>
+                    </div>
+                </form>
             </div>
         </div>
-        <!--  -->
-        <div class="signup" id="my-signup">
-            <div class="signup_wrapper">
-                <div class="signup_top">
-                    <a>&times;</a>
+    </div>
+    <!--  -->
+    <div class="signup" id="my-signup" onclick="xLogin()">
+        <div class="signup_wrapper">
+            <div class="signup_mid">
+                <div class="wapper-heading">
+                    <h1>Sign Up</h1>
                 </div>
-                <div class="signup_mid">
-                    <div class="wapper-heading">
-                        <h1>Sign Up</h1>
+                <form>
+                    <div class="input__field">
+                        <input id="username_signup" type="text" placeholder="User Name" />
                     </div>
-                    <form>
-                        <div class="input__field">
-                            <input id="username_signup" type="text" placeholder="User Name" />
-                        </div>
-                        <div class="input__field">
-                            <input id="email_signup" type="text" placeholder="Email" />
-                        </div>
-                        <div class="input__field">
-                            <input id="password_signup" type="password" placeholder="Password" />
-                        </div>
-                        <div class="input__field">
-                            <input id="password_signup" type="password" placeholder="Confirm Password" />
-                        </div>
-                        <div style="display: flex; justify-content: end;">
-                            <a class="login-link" onclick="lz()">Login</a>
-                        </div>
-                        <div style="display: flex; justify-content: center;">
-                            <button class="btn btn-signup">Sign Up</button>
-                        </div>
-                    </form>
-                </div>
+                    <div class="input__field">
+                        <input id="email_signup" type="text" placeholder="Email" />
+                    </div>
+                    <div class="input__field">
+                        <input id="password_signup" type="password" placeholder="Password" />
+                    </div>
+                    <div class="input__field">
+                        <input id="password_signup" type="password" placeholder="Confirm Password" />
+                    </div>
+                    <div style="display: flex; justify-content: end;">
+                        <a class="login-link" onclick="lzz()">Login</a>
+                    </div>
+                    <div style="display: flex; justify-content: center;">
+                        <button class="btn btn-signup">Sign Up</button>
+                    </div>
+                </form>
             </div>
         </div>
     </div>

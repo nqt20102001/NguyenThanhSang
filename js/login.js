@@ -1,23 +1,33 @@
 
 var ccc = document.querySelector('.login')
+var loz = document.querySelector('.signup')
+
 function cc() {
     ccc.style.visibility = "visible"
 }
 
-var loz = document.querySelector('.signup')
-var temp = 0
-function lz() {
-    if (temp === 0) {
-        ccc.style.visibility = "hidden"
-        loz.style.visibility = "visible"
-        temp = 1
-    }
-    else {
-        loz.style.visibility = "hidden"
-        ccc.style.visibility = "visible"
-        temp = 0
-    }
+document.querySelector('.login_wrapper').onclick = (e) => {
+    e.stopPropagation()
 }
+document.querySelector('.signup_wrapper').onclick = (e) => {
+    e.stopPropagation()
+}
+
+function xLogin() {
+    ccc.style.visibility = "hidden"
+    loz.style.visibility = "hidden"
+}
+
+function lz() {
+    ccc.style.visibility = "hidden"
+    loz.style.visibility = "visible"
+}
+function lzz() {
+    loz.style.visibility = "hidden"
+    ccc.style.visibility = "visible"
+}
+
+
 
 // Đăng kí
 
@@ -62,7 +72,10 @@ btnLogin.addEventListener("click", (e) => {
     if (!username.value || !email.value || !password.value) {
         alert("Nhập đầy đủ thông tin!");
     }
-    else if (localStorage.getItem(username.value) == json2) {
+    else if (username.value === "admin" && email.value === "admin" && password.value === "admin") {
+        alert("Admin!")
+        window.location.href = "admin.html"
+    } else if (localStorage.getItem(username.value) == json2) {
         // Dang nhap
         let userConfig = "currenUser";
         let json2 = JSON.stringify(user.username);
