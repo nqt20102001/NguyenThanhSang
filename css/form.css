@@ -380,7 +380,7 @@ input[name="product"]:checked+.modal {
 }
 
 #cart table td:nth-child(3),
-#cart table td:nth-child(4){
+#cart table td:nth-child(4) {
     width: 25%;
     text-align: center;
 }

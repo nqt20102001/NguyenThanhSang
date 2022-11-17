@@ -186,9 +186,11 @@ document.querySelector('head').innerHTML = `
 document.querySelector('#menu-wrapper').innerHTML = `
     <ul class="menu-main">
         <li id="btn-alls" class="active">ALL</li>
-        <li id="btn-tshirts">TSHIRT</li>
         <li id="btn-hoodies">HOODIE</li>
+        <li id="btn-tshirts">TSHIRT</li>
         <li id="btn-sweaters">SWEATER</li>
+        <li id="btn-priceT">Thấp -> Cao</li>
+        <li id="btn-priceC">Cao -> Thấp</li>
     </ul>`
 
 document.querySelector('#shopp').innerHTML = `
