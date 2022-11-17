@@ -218,13 +218,6 @@ main {
     text-align: center;
 }
 
-#cart-admin button {
-    color: #000;
-    padding: 10px;
-    background: transparent;
-    cursor: pointer;
-}
-
 #cart-admin table tbody tr:last-child {
     border-bottom: 1px solid var(--color-info-dark);
 }
@@ -233,6 +226,12 @@ main {
     padding-bottom: 15px;
 }
 
+#cart-admin button {
+    color: #000;
+    padding: 10px;
+    background: transparent;
+    cursor: pointer;
+}
 
 /*  */
 .add-product {

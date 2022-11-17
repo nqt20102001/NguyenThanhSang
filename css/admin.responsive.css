@@ -16,13 +16,6 @@
         position: relative;
         margin-top: 1.8rem;
     }
-
-    /* main table thead tr th:last-child,
-    main table thead tr th:first-child,
-    main table tbody tr td:last-child,
-    main table tbody tr td:first-child {
-        display: none;
-    } */
 }
 
 @media screen and (max-width: 768px) {
@@ -124,31 +117,24 @@
         font-size: 2rem;
     }
 
-    #cart-admin table td:nth-child(1) {
+    #cart-admin table td:nth-child(1),
+    #cart-admin table td:nth-child(3) {
         width: 20%;
     }
     
     #cart-admin table td:nth-child(2) {
         width: 40%;
     }
-
-    #cart-admin table td:nth-child(3) {
-        width: 20%;
-    }
     
-    #cart-admin table td:nth-child(4)
-    {
-        width: 10%;
-    }
-    
-    #cart-admin table td:nth-child(5)
-    {
+    #cart-admin table td:nth-child(4),
+    #cart-admin table td:nth-child(5) {
         width: 10%;
     }
 }
 
 @media screen and (max-width: 648px) {
-    #cart-admin table td:nth-child(1) {
+    #cart-admin table td:nth-child(1),
+    #cart-admin table td:nth-child(3) {
         width: 20%;
     }
     
@@ -161,17 +147,8 @@
         text-align: start;
     }
     
-    #cart-admin table td:nth-child(3) {
-        width: 20%;
-    }
-    
-    #cart-admin table td:nth-child(4)
-    {
-        width: 15%;
-    }
-    
-    #cart-admin table td:nth-child(5)
-    {
+    #cart-admin table td:nth-child(4), 
+    #cart-admin table td:nth-child(5) {
         width: 15%;
     }
 }

@@ -10,7 +10,11 @@
     #product1 .pro img {
         height: 200px;
     }
+    #menu-wrapper .menu-main {
+        margin: 0 25%;
+    }
 }
+
 @media (max-width: 968px){
     #product1 .pro-container {
         gap: 30px;
@@ -20,6 +24,9 @@
     #product1 .pro img {
         height: 250px;
     }
+    #menu-wrapper .menu-main {
+        margin: 0 20%;
+    }
 }
 
 
@@ -28,7 +35,10 @@
     .section-p1 {
         padding: 40px 40px;
     }
-
+    #cart {
+        margin-top: 2rem;
+        padding: 0 1rem;
+    }
     #header {
         padding: 12px 20px;
     }
@@ -68,12 +78,22 @@
         width: 100%;
     }
 
-    .modal-container {
-
+    #menu-wrapper .menu-main {
+        margin: 0 15%;
     }
 
-    #menu-wrapper .menu-main {
-        margin: 0 30px;
+    #cart-admin table td:nth-child(1),
+    #cart-admin table td:nth-child(3) {
+        width: 20%;
+    }
+    
+    #cart-admin table td:nth-child(2) {
+        width: 40%;
+    }
+    
+    #cart-admin table td:nth-child(4),
+    #cart-admin table td:nth-child(5) {
+        width: 10%;
     }
 }
 
@@ -101,7 +121,7 @@
         width: 30%;
     }
 
-    #mainImg {
+    .main-img {
         width: 70% !important;
         margin: auto;
     }
@@ -136,13 +156,8 @@
         display: none;
     }
 
-    .single-pro-details select {
-        width: 50%;
-        margin: auto;
-    }
-
     .single-pro-details input {
-        width: 30px;
+        width: 40px;
         height: 20px;
         margin: 10px auto;
     }
@@ -152,12 +167,23 @@
         margin: auto;
     }
 
-    #cart table td:nth-child(4) {
-        width: 15%;
+    #cart-admin table td:nth-child(1),
+    #cart-admin table td:nth-child(3) {
+        width: 20%;
+    }
+    
+    #cart-admin table td:nth-child(2) {
+        width: 30%;
     }
 
-    #cart table td:nth-child(5){
-        width: 20%;
+    #cart-admin table tbody td:nth-child(2) {
+        padding-left: 5px;
+        text-align: start;
+    }
+    
+    #cart-admin table td:nth-child(4), 
+    #cart-admin table td:nth-child(5) {
+        width: 15%;
     }
     
 }
@@ -269,7 +295,7 @@
         width: 100%;
     }
 
-    #mainImg {
+    .main-img {
         width: 70% !important;
         margin: auto;
     }
@@ -320,10 +346,6 @@
         margin: auto;
     }
 
-    #cart-add {
-        flex-direction: column;
-    }
-
     #subtotal {
         width: 100%;
         padding: 20px;
@@ -331,5 +353,20 @@
 
     #menu-wrapper .menu-main {
         margin: 0 20px;
+    }
+
+    #cart-admin table img {
+        width: 60px;
+    }
+
+    #cart-admin table thead td {
+        font-weight: 600;
+        text-transform: uppercase;
+        padding: 12px 0;
+        font-size: .8rem;
+    }
+
+    #cart-admin table tbody td {
+        font-size: .8rem;
     }
 }
