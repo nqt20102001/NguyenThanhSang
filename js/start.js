@@ -8,9 +8,9 @@ document.querySelector('#header').innerHTML = `
 
     <div class="search-wrapper">
         <div class="search-main" id="search-main">
-            <input type="text" id="input-search" placeholder="Search here...">
+            <input type="text" id="search-item" placeholder="Tìm kiếm đc rồi đó cc (Nhập đúng tên)">
         </div>
-        <button id="btn-search">
+        <button id="btn-find">
             <i class="fa-solid fa-magnifying-glass"></i>
         </button>
     </div>
@@ -191,10 +191,6 @@ document.querySelector('#menu-wrapper').innerHTML = `
         <li id="btn-sweaters">SWEATER</li>
         <li id="btn-priceT">Thấp -> Cao</li>
         <li id="btn-priceC">Cao -> Thấp</li>
-        <li id="btn-priceC">
-            <input type="text">
-            <button>Find</button>
-        </li>
     </ul>`
 
 document.querySelector('#shopp').innerHTML = `

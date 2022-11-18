@@ -29,4 +29,4 @@ productsList.forEach(product => {
     `;
     tr.innerHTML = trContent;
     document.querySelector('table tbody').appendChild(tr);
-});
+})

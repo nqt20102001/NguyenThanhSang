@@ -118,13 +118,6 @@ function out(art) {
                     <h6>Home / T - Shirst</h6>
                     <h4 id="name-product">${product.name}</h4>
                     <h5 id="price-product">${product.price}.000</h5>
-                    <select>
-                        <option>Select Sizes</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
                     <input type="number" value="1">
                     <button class="normal" id="btn-add-cart" onclick="addToCart()">Add to cart</button>
                 </div>
@@ -444,4 +437,15 @@ btnSwt.addEventListener('click', function (event) {
         art.sort(function (a, b) { return b.price - a.price })
         out(art)
     })
+})
+
+var find = document.getElementById("btn-find")
+
+find.addEventListener("click", function () {
+    let dataInputFind = document.getElementById('search-item').value
+
+    let art = productsList.filter(function (product) {
+        return product.name === dataInputFind
+    })
+    out(art)
 })

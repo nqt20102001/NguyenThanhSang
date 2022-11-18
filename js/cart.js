@@ -4,15 +4,18 @@
 var btnAddCarts = document.querySelectorAll('#btn-add-cart');
 
 function addToCart() {
-    alert("Oce!")
-    var btnAddCart = event.target;
-    var product = btnAddCart.parentElement;
-    var productDetail = product.parentElement;
-    var productImg = productDetail.querySelector('.main-img').src;
-    var productName = productDetail.querySelector('#name-product').innerText;
-    var productPrice = productDetail.querySelector('#price-product').innerText;
-
-    addCart(productImg, productName, productPrice);
+    if (getUser) {
+        alert("Đã thêm.")
+        var btnAddCart = event.target;
+        var product = btnAddCart.parentElement;
+        var productDetail = product.parentElement;
+        var productImg = productDetail.querySelector('.main-img').src;
+        var productName = productDetail.querySelector('#name-product').innerText;
+        var productPrice = productDetail.querySelector('#price-product').innerText;
+        addCart(productImg, productName, productPrice);
+    }
+    else
+        alert("Đăng nhập đi thằng lz")
 }
 
 function addCart(productImg, productName, productPrice) {

@@ -3,13 +3,13 @@ var su_wr = document.querySelector('.signup')
 
 function cc() {
     lg_wr.style.visibility = "visible"
-}
 
-document.querySelector('.login_wrapper').onclick = (e) => {
-    e.stopPropagation()
-}
-document.querySelector('.signup_wrapper').onclick = (e) => {
-    e.stopPropagation()
+    document.querySelector('.login_wrapper').onclick = (e) => {
+        e.stopPropagation()
+    }
+    document.querySelector('.signup_wrapper').onclick = (e) => {
+        e.stopPropagation()
+    }
 }
 
 function xLogin() {
@@ -51,7 +51,7 @@ btnSignup.addEventListener("click", (e) => {
         ccc.style.visibility = "visible"
         loz.style.visibility = "hidden"
     }
-});
+})
 
 // Đăng nhập
 
@@ -84,7 +84,10 @@ btnLogin.addEventListener("click", (e) => {
     } else {
         alert("Sai thông tin!");
     }
-});
+})
+
+
+// Dang Xuat
 
 const $ = document.querySelector.bind(document)
 const $$ = document.querySelectorAll.bind(document)
@@ -119,15 +122,9 @@ if (getUser) {
     `
 }
 
-const dangXuat = () => {
-    localStorage.setItem(CURRENT_USER, null)
-}
 let logOutBtn = $(".logout")
-logOutBtn.onclick = (e) => {
-    dangXuat();
-    document.location.reload();
-}
 
-function xAdmin() {
-    window.location.href = "index.html"
+logOutBtn.onclick = (e) => {
+    localStorage.setItem(CURRENT_USER, null)
+    document.location.reload();
 }
