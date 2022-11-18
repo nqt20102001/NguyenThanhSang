@@ -569,7 +569,36 @@ footer .logo-main {
     color: #fff;
 }
 
+
+/* Phan trang */
+
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pagination-button {
+    cursor: pointer;
+    width: 20px;
+    color: red;
+    font-size: 30px;
+}
+
+.number-page {
+    display: flex;
+}
+
+.number-page li {
+    margin: 0 10px;
+    cursor: pointer;
+    background-color: pink;
+    padding: 4px 12px;
+}
+
+
 /* ========== CHANGE PAGES ========== */
+
 #shopp {
     display: block;
 }
