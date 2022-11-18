@@ -191,6 +191,10 @@ document.querySelector('#menu-wrapper').innerHTML = `
         <li id="btn-sweaters">SWEATER</li>
         <li id="btn-priceT">Thấp -> Cao</li>
         <li id="btn-priceC">Cao -> Thấp</li>
+        <li id="btn-priceC">
+            <input type="text">
+            <button>Find</button>
+        </li>
     </ul>`
 
 document.querySelector('#shopp').innerHTML = `

@@ -551,11 +551,11 @@ footer .logo-main {
 #menu-wrapper .menu-main {
     display: flex;
     justify-content: space-between;
-    margin: 0 30%;
+    margin: 0 16%;
 }
 
 #menu-wrapper .menu-main li {
-    padding: 16px;
+    padding: 10px;
     cursor: pointer;
     font-size: 1rem;
     font-weight: 500;
