@@ -1,21 +1,29 @@
 // t coppy qua file khac cho dễ đọc
 // viết chung rối quá
 
+
+
+// để t làm giỏ hàng luôn cho đừng sửa code của t
+// m làm như cc
+
+
+
 var btnAddCarts = document.querySelectorAll('#btn-add-cart');
 
-function addToCart() {
+function addToCart(x) {
     if (getUser) {
         alert("Đã thêm.")
-        var btnAddCart = event.target;
-        var product = btnAddCart.parentElement;
-        var productDetail = product.parentElement;
-        var productImg = productDetail.querySelector('.main-img').src;
-        var productName = productDetail.querySelector('#name-product').innerText;
-        var productPrice = productDetail.querySelector('#price-product').innerText;
+        var product = x.parentElement
+        var productImg = product.parentElement.querySelector('.main-img').src;
+        var productName = product.querySelector('#name-product').innerText;
+        var productPrice = product.querySelector('#price-product').innerText;
         addCart(productImg, productName, productPrice);
     }
-    else
+    else {
         alert("Đăng nhập đi thằng lz")
+        // let lg_wr = document.querySelector('.login')
+        // lg_wr.style.visibility = "visible"
+    }
 }
 
 function addCart(productImg, productName, productPrice) {

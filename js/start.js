@@ -196,4 +196,15 @@ document.querySelector('#menu-wrapper').innerHTML = `
 document.querySelector('#shopp').innerHTML = `
     <section id="product1" class="section-p1" style="text-align: center;">
         <div class="pro-container"></div>
-    </section>`
+    </section>
+    <nav class="pagination-container" id="an">
+        Phan trang xong roi cc <br>
+        Nếu biết làm thì lam hieu ung mấy cái button giong nhu menu dùm t
+        <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
+            &lt;
+        </button>
+        <div class="number-page" id="number-page"></div>
+        <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
+            &gt;
+        </button>
+    </nav>`

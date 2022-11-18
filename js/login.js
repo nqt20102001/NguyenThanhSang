@@ -48,8 +48,8 @@ btnSignup.addEventListener("click", (e) => {
     } else {
         localStorage.setItem(username_signup.value, json);
         alert("Đăng kí thành công!");
-        ccc.style.visibility = "visible"
-        loz.style.visibility = "hidden"
+        su_wr.style.visibility = "hidden"
+        lg_wr.style.visibility = "visible"
     }
 })
 

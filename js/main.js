@@ -83,29 +83,6 @@ csmic()
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Phân trang
 
 let perPage = 8
@@ -114,7 +91,7 @@ let end = perPage
 const btnNext = document.getElementById("next-button");
 const btnPrev = document.getElementById("prev-button");
 var currentPage = 1
-var totalPages = Math.ceil(productsList.length / perPage)
+var totalPages
 
 function getCurrentPage(currentPage) {
     start = (currentPage - 1) * perPage
@@ -139,7 +116,7 @@ btnNext.addEventListener("click", () => {
         currentPage = totalPages
     }
     getCurrentPage(currentPage)
-    listPr()
+    out(art)
 })
 
 btnPrev.addEventListener("click", () => {
@@ -148,7 +125,7 @@ btnPrev.addEventListener("click", () => {
         currentPage = 1
     }
     getCurrentPage(currentPage)
-    listPr()
+    out(art)
 })
 
 function changePage() {
@@ -158,29 +135,10 @@ function changePage() {
             let value = i + 1;
             currentPage = value
             getCurrentPage(currentPage)
-            listPr()
+            out(art)
         })
     }
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -192,62 +150,71 @@ var btnHoodie = document.querySelector('#btn-hoodies')
 var btnSwt = document.querySelector('#btn-sweaters')
 var giaThap = document.querySelector('#btn-priceT')
 var giaCao = document.querySelector('#btn-priceC')
+var art
 
-
-function listPr() {
-    const htmls = productsList.map((product, index) => {
+function out(art) {
+    let temp = ""
+    art.map((product, index) => {
         if (index >= start && index < end) {
-            return `
-            <div>
-                <input type="checkbox" name="product" id="p${index}"/>
-                <div class="modal">
-                    <div class="modal-container">
-                        <div class="single-pro-img">
-                            <img src="${product.img}" style="width: 100%;" class="main-img" alt="">
-                            <div class="sm-img-group">
-                                <div class="sm-img-col">
-                                    <img src="${product.img}" style="width: 100%;" class="sm-img" alt="">
-                                </div>
-                                <div class="sm-img-col">
-                                    <img src="${product.img2}" style="width: 100%;" class="sm-img" alt="">
-                                </div>
-                                <div class="sm-img-col">
-                                    <img src="${product.img3}" style="width: 100%;" class="sm-img" alt="">
-                                </div>
-                                <div class="sm-img-col">
-                                    <img src="${product.img4}" style="width: 100%;" class="sm-img" alt="">
+            temp += `
+                <div>
+                    <input type="checkbox" name="product" id="p${index}"/>
+                    <div class="modal">
+                        <div class="modal-container">
+
+                            <div class="single-pro-img">
+                                <img src="${product.img}" style="width: 100%;" class="main-img" alt="">
+                                <div class="sm-img-group">
+                                    <div class="sm-img-col">
+                                        <img src="${product.img}" style="width: 100%;" class="sm-img" alt="">
+                                    </div>
+                                    <div class="sm-img-col">
+                                        <img src="${product.img2}" style="width: 100%;" class="sm-img" alt="">
+                                    </div>
+                                    <div class="sm-img-col">
+                                        <img src="${product.img3}" style="width: 100%;" class="sm-img" alt="">
+                                    </div>
+                                    <div class="sm-img-col">
+                                        <img src="${product.img4}" style="width: 100%;" class="sm-img" alt="">
+                                    </div>
                                 </div>
                             </div>
+
+                            <div class="single-pro-details">
+                                <h4 id="name-product">${product.name}</h4>
+                                <h5 id="price-product">${product.price}.000</h5>
+                                <input type="number" value="1">
+                                <button class="normal" id="btn-add-cart" onclick="addToCart(this)">Add to cart</button>
+                            </div>
+
                         </div>
-        
-                        <div class="single-pro-details">
-                            <h6>Home / T - Shirst</h6>
-                            <h4 id="name-product">${product.name}</h4>
-                            <h5 id="price-product">${product.price}.000</h5>
-                            <input type="number" value="1">
-                            <button class="normal" id="btn-add-cart" onclick="addToCart()">Add to cart</button>
-                        </div>
+                        <label for="p${index}"></label>
                     </div>
-                    <label for="p${index}"></label>
-                </div>
-        
-                <label for="p${index}">
-                    <div  class="pro">
-                        <img src="${product.img}" alt="">
-                        <div class="des">
-                            <h4 id="name-product">${product.name}</h4>
-                            <h5 id="price-product">${product.price}.000</h5>
+
+                    <label for="p${index}">
+                        <div class="pro">
+                            <img src="${product.img}" alt="">
+                            <div class="des">
+                                <h4 id="name-product">${product.name}</h4>
+                                <h5 id="price-product">${product.price}.000</h5>
+                            </div>
                         </div>
-                    </div>
-                </label>
-            </div>
-            `
+                    </label>
+                </div>`
         }
     })
-    document.querySelector("#shopp #product1 .pro-container").innerHTML = htmls.join("")
+    document.querySelector("#shopp #product1 .pro-container").innerHTML = temp
     csmic()
+}
+
+function listPr() {
+    getCurrentPage(1)
+    totalPages = Math.ceil(productsList.length / perPage)
+
+    art = productsList.slice()
+    out(art)
     renderListPage(totalPages)
-    changePage()
+    changePage(art)
 
     giaThap.addEventListener("click", function (e) {
         getCurrentPage(1)
@@ -255,12 +222,12 @@ function listPr() {
         art.sort(function (a, b) { return a.price - b.price })
         out(art)
         renderListPage(totalPages)
-        changePage()
+        changePage(art)
     })
 
     giaCao.addEventListener("click", function (e) {
         getCurrentPage(1)
-        let art = productsList.slice();
+        art = productsList.slice();
         art.sort(function (a, b) { return b.price - a.price })
         out(art)
         renderListPage(totalPages)
@@ -274,236 +241,86 @@ btnAll.addEventListener('click', function (event) {
     listPr()
 })
 
+btnHoodie.addEventListener('click', function (event) {
+    getCurrentPage(1)
+    totalPages = Math.ceil(hoodiesList.length / perPage)
+
+    art = hoodiesList.slice()
+    out(art)
+    renderListPage(totalPages)
+    renderListPage(totalPages)
+    changePage()
+
+    giaThap.addEventListener("click", function (e) {
+        art = hoodiesList.slice();
+        art.sort(function (a, b) { return a.price - b.price })
+        out(art)
+        renderListPage(totalPages)
+        changePage()
+    })
+
+    giaCao.addEventListener("click", function (e) {
+        art = hoodiesList.slice();
+        art.sort(function (a, b) { return b.price - a.price })
+        out(art)
+        renderListPage(totalPages)
+        changePage()
+    })
+})
 
 btnShirt.addEventListener('click', function (event) {
     getCurrentPage(1)
-    let temp = ""
-    tshitsList.map((product, index) => {
-        if (index >= start && index < end) {
-            temp += `
-    <div>
-        <input type="checkbox" name="product" id="p${index}"/>
-        <div class="modal">
-            <div class="modal-container">
-
-                <div class="single-pro-img">
-                    <img src="${product.img}" style="width: 100%;" class="main-img" alt="">
-                    <div class="sm-img-group">
-                        <div class="sm-img-col">
-                            <img src="${product.img}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                        <div class="sm-img-col">
-                            <img src="${product.img2}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                        <div class="sm-img-col">
-                            <img src="${product.img3}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                        <div class="sm-img-col">
-                            <img src="${product.img4}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="single-pro-details">
-                    <h6>Home / T - Shirst</h6>
-                    <h4 id="name-product">${product.name}</h4>
-                    <h5 id="price-product">${product.price}.000</h5>
-                    <select>
-                        <option>Select Sizes</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
-                    <input type="number" value="1">
-                    <button class="normal" id="btn-add-cart" onclick="addToCart()">Add to cart</button>
-                </div>
-
-            </div>
-            <label for="p${index}"></label>
-        </div>
-
-        <label for="p${index}">
-            <div  class="pro">
-                <img src="${product.img}" alt="">
-                <div class="des">
-                    <h4 id="name-product">${product.name}</h4>
-                    <h5 id="price-product">${product.price}.000</h5>
-                </div>
-            </div>
-        </label>
-    </div>`
-        }
-    })
-    document.querySelector("#shopp #product1 .pro-container").innerHTML = temp
-    csmic()
     totalPages = Math.ceil(tshitsList.length / perPage)
+
+    art = tshitsList.slice()
+    out(art)
     renderListPage(totalPages)
+    changePage()
 
     giaThap.addEventListener("click", function (e) {
-        let art = tshitsList.slice();
+        art = tshitsList.slice();
         art.sort(function (a, b) { return a.price - b.price })
         out(art)
+        renderListPage(totalPages)
+        changePage()
     })
 
     giaCao.addEventListener("click", function (e) {
-        let art = tshitsList.slice();
+        art = tshitsList.slice();
         art.sort(function (a, b) { return b.price - a.price })
         out(art)
+        renderListPage(totalPages)
+        changePage()
     })
 })
-
-btnHoodie.addEventListener('click', function (event) {
-    let temp = ""
-    hoodiesList.map((product, index) => {
-        temp += `
-    <div>
-        <input type="checkbox" name="product" id="p${index}"/>
-        <div class="modal">
-            <div class="modal-container">
-
-                <div class="single-pro-img">
-                    <img src="${product.img}" style="width: 100%;" class="main-img" alt="">
-                    <div class="sm-img-group">
-                        <div class="sm-img-col">
-                            <img src="${product.img}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                        <div class="sm-img-col">
-                            <img src="${product.img2}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                        <div class="sm-img-col">
-                            <img src="${product.img3}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                        <div class="sm-img-col">
-                            <img src="${product.img4}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="single-pro-details">
-                    <h6>Home / T - Shirst</h6>
-                    <h4 id="name-product">${product.name}</h4>
-                    <h5 id="price-product">${product.price}.000</h5>
-                    <select>
-                        <option>Select Sizes</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
-                    <input type="number" value="1">
-                    <button class="normal" id="btn-add-cart" onclick="addToCart()">Add to cart</button>
-                </div>
-
-            </div>
-            <label for="p${index}"></label>
-        </div>
-
-        <label for="p${index}">
-            <div  class="pro">
-                <img src="${product.img}" alt="">
-                <div class="des">
-                    <h4 id="name-product">${product.name}</h4>
-                    <h5 id="price-product">${product.price}.000</h5>
-                </div>
-            </div>
-        </label>
-    </div>`
-    })
-    document.querySelector("#shopp #product1 .pro-container").innerHTML = temp
-    csmic()
-    renderListPage(totalPages)
-
-    giaThap.addEventListener("click", function (e) {
-        let art = hoodiesList.slice();
-        art.sort(function (a, b) { return a.price - b.price })
-        out(art)
-    })
-
-    giaCao.addEventListener("click", function (e) {
-        let art = hoodiesList.slice();
-        art.sort(function (a, b) { return b.price - a.price })
-        out(art)
-    })
-})
-
 
 btnSwt.addEventListener('click', function (event) {
-    let temp = ""
-    sweatersList.map((product, index) => {
-        temp += `
-    <div>
-        <input type="checkbox" name="product" id="p${index}"/>
-        <div class="modal">
-            <div class="modal-container">
+    getCurrentPage(1)
+    totalPages = Math.ceil(sweatersList.length / perPage)
 
-                <div class="single-pro-img">
-                    <img src="${product.img}" style="width: 100%;" class="main-img" alt="">
-                    <div class="sm-img-group">
-                        <div class="sm-img-col">
-                            <img src="${product.img}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                        <div class="sm-img-col">
-                            <img src="${product.img2}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                        <div class="sm-img-col">
-                            <img src="${product.img3}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                        <div class="sm-img-col">
-                            <img src="${product.img4}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="single-pro-details">
-                    <h6>Home / T - Shirst</h6>
-                    <h4 id="name-product">${product.name}</h4>
-                    <h5 id="price-product">${product.price}.000</h5>
-                    <select>
-                        <option>Select Sizes</option>
-                        <option>S</option>
-                        <option>M</option>
-                        <option>L</option>
-                        <option>XL</option>
-                    </select>
-                    <input type="number" value="1">
-                    <button class="normal" id="btn-add-cart" onclick="addToCart()">Add to cart</button>
-                </div>
-
-            </div>
-            <label for="p${index}"></label>
-        </div>
-
-        <label for="p${index}">
-            <div  class="pro">
-                <img src="${product.img}" alt="">
-                <div class="des">
-                    <h4 id="name-product">${product.name}</h4>
-                    <h5 id="price-product">${product.price}.000</h5>
-                </div>
-            </div>
-        </label>
-    </div>`
-    })
-    document.querySelector("#shopp #product1 .pro-container").innerHTML = temp
-    csmic()
+    art = sweatersList.slice()
+    out(art)
     renderListPage(totalPages)
+    changePage()
 
     giaThap.addEventListener("click", function (e) {
-        let art = sweatersList.slice();
+        art = sweatersList.slice();
         art.sort(function (a, b) { return a.price - b.price })
         out(art)
+        renderListPage(totalPages)
+        changePage()
     })
 
     giaCao.addEventListener("click", function (e) {
-        let art = sweatersList.slice();
+        art = sweatersList.slice();
         art.sort(function (a, b) { return b.price - a.price })
         out(art)
+        renderListPage(totalPages)
+        changePage()
     })
 })
 
 var find = document.getElementById("btn-find")
-
 find.addEventListener("click", function () {
     let dataInputFind = document.getElementById('search-item').value
 
@@ -512,59 +329,3 @@ find.addEventListener("click", function () {
     })
     out(art)
 })
-
-function out(art) {
-    let temp = ""
-    art.map((product, index) => {
-        if (index >= start && index < end) {
-            temp += `
-    <div>
-        <input type="checkbox" name="product" id="p${index}"/>
-        <div class="modal">
-            <div class="modal-container">
-
-                <div class="single-pro-img">
-                    <img src="${product.img}" style="width: 100%;" class="main-img" alt="">
-                    <div class="sm-img-group">
-                        <div class="sm-img-col">
-                            <img src="${product.img}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                        <div class="sm-img-col">
-                            <img src="${product.img2}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                        <div class="sm-img-col">
-                            <img src="${product.img3}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                        <div class="sm-img-col">
-                            <img src="${product.img4}" style="width: 100%;" class="sm-img" alt="">
-                        </div>
-                    </div>
-                </div>
-
-                <div class="single-pro-details">
-                    <h6>Home / T - Shirst</h6>
-                    <h4 id="name-product">${product.name}</h4>
-                    <h5 id="price-product">${product.price}.000</h5>
-                    <input type="number" value="1">
-                    <button class="normal" id="btn-add-cart" onclick="addToCart()">Add to cart</button>
-                </div>
-
-            </div>
-            <label for="p${index}"></label>
-        </div>
-
-        <label for="p${index}">
-            <div  class="pro">
-                <img src="${product.img}" alt="">
-                <div class="des">
-                    <h4 id="name-product">${product.name}</h4>
-                    <h5 id="price-product">${product.price}.000</h5>
-                </div>
-            </div>
-        </label>
-    </div>`
-        }
-    })
-    document.querySelector("#shopp #product1 .pro-container").innerHTML = temp
-    csmic()
-}
