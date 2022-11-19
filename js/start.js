@@ -198,8 +198,6 @@ document.querySelector('#shopp').innerHTML = `
         <div class="pro-container"></div>
     </section>
     <nav class="pagination-container" id="an">
-        Phan trang xong roi cc <br>
-        Nếu biết làm thì lam hieu ung mấy cái button giong nhu menu dùm t
         <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
             &lt;
         </button>
@@ -208,6 +206,25 @@ document.querySelector('#shopp').innerHTML = `
             &gt;
         </button>
     </nav>`
+
+document.querySelector('#cartt').innerHTML = `
+        <section id="cart" class="section-p1">
+            <table width:"100%">
+                <thead>
+                    <tr>
+                        <td>Image</td>
+                        <td>Product</td>
+                        <td>Price</td>
+                        <td>Quantity</td>
+                        <td>Remove</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Cart here! -->
+                </tbody>
+            </table>
+        </section>
+        <section id="cart-add" class="section-p1"></section>`
 
 document.querySelector('#cart-add').innerHTML = `
     <div id="subtotal">

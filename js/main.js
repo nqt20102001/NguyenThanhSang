@@ -100,9 +100,9 @@ function getCurrentPage(currentPage) {
 
 function renderListPage(totalPages) {
     let html = '';
-    html += `<li class="current-page active"><a>${1}</a></li>`;
+    html += `<li class="current-page active"><a id="page">${1}</a></li>`;
     for (let i = 2; i <= totalPages; i++) {
-        html += `<li><a>${i}</a></li>`;
+        html += `<li><a id="page">${i}</a></li>`;
     }
     if (totalPages === 0) {
         html = ''
