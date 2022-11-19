@@ -30,3 +30,36 @@ productsList.forEach(product => {
     tr.innerHTML = trContent;
     document.querySelector('table tbody').appendChild(tr);
 })
+
+
+
+// =========
+// const productsAdmin = document.getElementById("products-admin");
+// const customersAdmin = document.getElementById("customers-admin");
+// const ordersAdmin = document.getElementById("orders-admin");
+// const addProductsAdmin = document.getElementById("add-producst-admin");
+// const sidebar = document.getElementsByTagName(".sidebar a");
+
+// if (productsAdmin) {
+//     productsAdmin.addEventListener('click', () => {
+//         sidebar.classList.add('active');
+//     })
+// }
+
+// if (customersAdmin) {
+//     ordersAdmin.addEventListener('click', () => {
+//         sidebar.classList.add('active');
+//     })
+// }
+
+// if (ordersAdmin) {
+//     ordersAdmin.addEventListener('click', () => {
+//         sidebar.classList.add('active');
+//     })
+// }
+
+// if (addProductsAdmin) {
+//     addProductsAdmin.addEventListener('click', () => {
+//         sidebar.classList.add('active');
+//     })
+// }
