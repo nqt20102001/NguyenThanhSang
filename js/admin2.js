@@ -24,4 +24,14 @@ document.querySelector('head').innerHTML = `
     <link rel="stylesheet" href="./css/admin.responsive.css">
     <link rel="stylesheet" href="./css/form.css">
 
-    <title>Admin</title>`
+    <title>Admin</title>
+    `
+
+// document.querySelector('#product-management').innerHTML = `
+
+// `
+
+
+// document.querySelector('#add-product').innerHTML = `
+
+// `
