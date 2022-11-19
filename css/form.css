@@ -572,10 +572,10 @@ footer .logo-main {
 
 #btn-price:hover > ul{
     display: block;
+    background-color: #d8d8d8;
 }
 
 #btn-price ul {
-    /* display: none; */
     top: 37px;
     left: 0;
     width: 120px;
@@ -586,11 +586,6 @@ footer .logo-main {
     box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
     border: 1px solid #ccc;
 }
-
-#btn-price + div{
-    /* display: block; */
-}
-
 
 /* Phan trang */
 

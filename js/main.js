@@ -241,7 +241,9 @@ btnAll.addEventListener('click', function (event) {
     listPr()
 })
 
-btnHoodie.addEventListener('click', function (event) {
+
+
+function hoodie() {
     getCurrentPage(1)
     totalPages = Math.ceil(hoodiesList.length / perPage)
 
@@ -266,9 +268,10 @@ btnHoodie.addEventListener('click', function (event) {
         renderListPage(totalPages)
         changePage()
     })
-})
+}
+btnHoodie.addEventListener('click', hoodie)
 
-btnShirt.addEventListener('click', function (event) {
+function tshirt() {
     getCurrentPage(1)
     totalPages = Math.ceil(tshitsList.length / perPage)
 
@@ -292,9 +295,10 @@ btnShirt.addEventListener('click', function (event) {
         renderListPage(totalPages)
         changePage()
     })
-})
+}
+btnShirt.addEventListener('click', tshirt)
 
-btnSwt.addEventListener('click', function (event) {
+function sweater() {
     getCurrentPage(1)
     totalPages = Math.ceil(sweatersList.length / perPage)
 
@@ -318,15 +322,30 @@ btnSwt.addEventListener('click', function (event) {
         renderListPage(totalPages)
         changePage()
     })
-})
+}
+btnSwt.addEventListener('click', sweater)
 
-const styleProduct = document.getElementsByClassName(".pro")
 var find = document.getElementById("btn-find")
 find.addEventListener("click", function () {
     let dataInputFind = document.getElementById('search-item').value
-    let art = productsList.filter(function (product) {
+    // dataInputFind.lowercase()
 
-        return product.name === dataInputFind;
-    })
-    out(art)
+    let art
+    console.log(dataInputFind);
+    if (dataInputFind === "hoodie") {
+        hoodie()
+    }
+    else if (dataInputFind === "tshirt") {
+        tshirt()
+    }
+    else if (dataInputFind === "sweater") {
+        sweater()
+    }
+    else {
+        art = productsList.filter(function (product) {
+            return product.name === dataInputFind
+        })
+        out(art)
+    }
+
 })
