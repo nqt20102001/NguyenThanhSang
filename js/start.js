@@ -208,3 +208,19 @@ document.querySelector('#shopp').innerHTML = `
             &gt;
         </button>
     </nav>`
+
+document.querySelector('#cart-add').innerHTML = `
+    <div id="subtotal">
+        <h3>Cart Totals</h3>
+        <table>
+            <tr>
+                <td style="width: 18%;"><strong>Total</strong></td>
+                <td id="price_css">
+                    <strong><span>0</span></strong>
+                </td>
+            </tr>
+        </table>
+        <button class="btn-totalCart" style="background-color: red;" onclick="emptyCart()">Delete
+            Cart</button>
+        <button class="btn-totalCart">Proceed to checkout</button>
+    </div>`

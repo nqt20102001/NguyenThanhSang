@@ -18,7 +18,7 @@ button.normal {
     cursor: pointer;
     border: none;
     outline: none;
-    transition: .2s;
+    transition: 0.2s;
 }
 
 
@@ -434,13 +434,6 @@ input[name="product"]:checked+.modal {
     cursor: pointer;
 }
 
-/* #cart-add {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-} */
-
-
 #subtotal h3 {
     padding-bottom: 15px;
     font-size: 1rem;
@@ -453,10 +446,8 @@ input[name="product"]:checked+.modal {
 }
 
 #subtotal {
-    width: 50%;
-    margin-bottom: 30px;
-    border: solid 1px var(--color-info-dark);
-    padding: 30px;
+    width: 30%;
+    margin: 30px 0;
 }
 
 #subtotal table {
@@ -468,10 +459,16 @@ input[name="product"]:checked+.modal {
 #subtotal table td {
     border: solid 1px var(--color-info-dark);
     padding: 10px;
-    font-size: 13px;
+    font-size: 16px;
 }
 
+#price_css {
+    text-align: end;
+}
 
+.btn-totalCart{
+    margin: 10px 20px;
+}
 
 /* ============== FOOTER ============== */
 
@@ -582,7 +579,7 @@ footer .logo-main {
     cursor: pointer;
     width: 20px;
     color: red;
-    font-size: 30px;
+    font-size: 28px;
 }
 
 .number-page {
@@ -590,12 +587,13 @@ footer .logo-main {
 }
 
 .number-page li {
-    margin: 0 10px;
+    margin: 0 20px;
     cursor: pointer;
-    background-color: pink;
-    padding: 4px 12px;
+    width: 40px;
+    text-align: center;
+    border: 1px solid #7380EC;
+    border-radius: 10px 10px 10px 10px;
 }
-
 
 /* ========== CHANGE PAGES ========== */
 

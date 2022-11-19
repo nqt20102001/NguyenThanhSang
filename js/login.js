@@ -101,7 +101,7 @@ if (getUser) {
     let t2 = document.querySelector('.logout')
     t1.innerHTML = `
     <div style="color: pink; font-size: 18px;">
-        ${getUser}
+        hello <br> ${getUser}
     </div>
     `
     t2.innerHTML = `

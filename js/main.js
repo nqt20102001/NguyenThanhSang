@@ -183,7 +183,7 @@ function out(art) {
                             <div class="single-pro-details">
                                 <h4 id="name-product">${product.name}</h4>
                                 <h5 id="price-product">${product.price}.000</h5>
-                                <input type="number" value="1">
+                                <input id="sl-product" type="number" min=1 value="1">
                                 <button class="normal" id="btn-add-cart" onclick="addToCart(this)">Add to cart</button>
                             </div>
 
