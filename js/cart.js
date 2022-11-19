@@ -38,6 +38,7 @@ function addToCart(x) {
         localStorage.setItem("arrCart", JSON.stringify(arrCart))
     }
     else {
+        
         alert("Đăng nhập đi thằng lz")
         // let lg_wr = document.querySelector('.login')
         // lg_wr.style.visibility = "visible"

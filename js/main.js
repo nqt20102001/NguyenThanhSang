@@ -320,12 +320,13 @@ btnSwt.addEventListener('click', function (event) {
     })
 })
 
+const styleProduct = document.getElementsByClassName(".pro")
 var find = document.getElementById("btn-find")
 find.addEventListener("click", function () {
     let dataInputFind = document.getElementById('search-item').value
-
     let art = productsList.filter(function (product) {
-        return product.name === dataInputFind
+
+        return product.name === dataInputFind;
     })
     out(art)
 })

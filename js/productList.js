@@ -1,7 +1,7 @@
 const tshitsList = [
     {
         id: "ts0",
-        name: "EGATOR® LION",
+        name: "EGATOR LION",
         price: 320.000,
         img: "./img/tshirts/1.1.jpg",
         img2: "./img/tshirts/1.2.jpg",
@@ -10,7 +10,7 @@ const tshitsList = [
     },
     {
         id: "ts1",
-        name: "EGATOR® CROCO",
+        name: "EGATOR CROCO",
         price: 330.000,
         img: "./img/tshirts/2.1.jpg",
         img2: "./img/tshirts/2.2.jpg",
@@ -19,7 +19,7 @@ const tshitsList = [
     },
     {
         id: "ts2",
-        name: "EGATOR® POPULAR",
+        name: "EGATOR POPULAR",
         price: 310.000,
         img: "./img/tshirts/3.1.jpg",
         img2: "./img/tshirts/3.2.jpg",
@@ -28,7 +28,7 @@ const tshitsList = [
     },
     {
         id: "ts3",
-        name: "EGATOR® DINOSAUR",
+        name: "EGATOR DINOSAUR",
         price: 350.000,
         img: "./img/tshirts/4.1.jpg",
         img2: "./img/tshirts/4.2.jpg",
@@ -37,7 +37,7 @@ const tshitsList = [
     },
     {
         id: "ts4",
-        name: "EGATOR® LOGO 2.0",
+        name: "EGATOR LOGO 2.0",
         price: 320.000,
         img: "./img/tshirts/5.1.jpg",
         img2: "./img/tshirts/5.2.jpg",
@@ -46,7 +46,7 @@ const tshitsList = [
     },
     {
         id: "ts5",
-        name: "EGATOR® FLORAL",
+        name: "EGATOR FLORAL",
         price: 300.000,
         img: "./img/tshirts/6.1.jpg",
         img2: "./img/tshirts/6.2.jpg",
@@ -55,7 +55,7 @@ const tshitsList = [
     },
     {
         id: "ts6",
-        name: "EGATOR® BTC",
+        name: "EGATOR BTC",
         price: 400.000,
         img: "./img/tshirts/7.1.jpg",
         img2: "./img/tshirts/7.2.jpg",
@@ -64,7 +64,7 @@ const tshitsList = [
     },
     {
         id: "ts7",
-        name: "EGATOR® SHARK",
+        name: "EGATOR SHARK",
         price: 300.000,
         img: "./img/tshirts/8.1.jpg",
         img2: "./img/tshirts/8.2.jpg",
@@ -73,7 +73,7 @@ const tshitsList = [
     },
     {
         id: "ts8",
-        name: "EGATOR® MILI",
+        name: "EGATOR MILI",
         price: 320.000,
         img: "./img/tshirts/9.1.jpg",
         img2: "./img/tshirts/9.2.jpg",
@@ -82,7 +82,7 @@ const tshitsList = [
     },
     {
         id: "ts9",
-        name: "EGATOR® COCA",
+        name: "EGATOR COCA",
         price: 335.000,
         img: "./img/tshirts/10.1.jpg",
         img2: "./img/tshirts/10.2.jpg",
@@ -91,7 +91,7 @@ const tshitsList = [
     },
     {
         id: "ts10",
-        name: "EGATOR® FRIEND",
+        name: "EGATOR FRIEND",
         price: 370.000,
         img: "./img/tshirts/11.1.jpg",
         img2: "./img/tshirts/11.2.jpg",
@@ -100,7 +100,7 @@ const tshitsList = [
     },
     {
         id: "ts11",
-        name: "EGATOR® GOD",
+        name: "EGATOR GOD",
         price: 315.000,
         img: "./img/tshirts/12.1.jpg",
         img2: "./img/tshirts/12.2.jpg",
@@ -109,7 +109,7 @@ const tshitsList = [
     },
     {
         id: "ts12",
-        name: "EGATOR® LOGO 3.0",
+        name: "EGATOR LOGO 3.0",
         price: 390.000,
         img: "./img/tshirts/13.1.jpg",
         img2: "./img/tshirts/13.2.jpg",
@@ -118,7 +118,7 @@ const tshitsList = [
     },
     {
         id: "ts13",
-        name: "EGATOR® LOCAL",
+        name: "EGATOR LOCAL",
         price: 450.000,
         img: "./img/tshirts/14.1.jpg",
         img2: "./img/tshirts/14.2.jpg",
@@ -127,7 +127,7 @@ const tshitsList = [
     },
     {
         id: "ts14",
-        name: "EGATOR® PLUS",
+        name: "EGATOR PLUS",
         price: 345.000,
         img: "./img/tshirts/15.1.jpg",
         img2: "./img/tshirts/15.2.jpg",
@@ -137,7 +137,7 @@ const tshitsList = [
     },
     {
         id: "ts15",
-        name: "EGATOR® DOLPHIN",
+        name: "EGATOR DOLPHIN",
         price: 360.000,
         img: "./img/tshirts/16.1.jpg",
         img2: "./img/tshirts/16.2.jpg",
@@ -150,7 +150,7 @@ const tshitsList = [
 const hoodiesList = [
     {
         id: "hd0",
-        name: "EGATOR® DORAE",
+        name: "EGATOR DORAE",
         price: 680.000,
         img: "./img/hoodies/1.1.jpg",
         img2: "./img/hoodies/1.2.jpg",
@@ -159,7 +159,7 @@ const hoodiesList = [
     },
     {
         id: "hd1",
-        name: "EGATOR® ZIPPER",
+        name: "EGATOR ZIPPER",
         price: 750.000,
         img: "./img/hoodies/2.1.jpg",
         img2: "./img/hoodies/2.2.jpg",
@@ -168,7 +168,7 @@ const hoodiesList = [
     },
     {
         id: "hd2",
-        name: "EGATOR® CREAM",
+        name: "EGATOR CREAM",
         price: 420.000,
         img: "./img/hoodies/3.1.jpg",
         img2: "./img/hoodies/3.2.jpg",
@@ -177,7 +177,7 @@ const hoodiesList = [
     },
     {
         id: "hd3",
-        name: "EGATOR® COLLAB",
+        name: "EGATOR COLLAB",
         price: 530.000,
         img: "./img/hoodies/4.1.jpg",
         img2: "./img/hoodies/4.2.jpg",
@@ -186,7 +186,7 @@ const hoodiesList = [
     },
     {
         id: "hd4",
-        name: "EGATOR® MINI",
+        name: "EGATOR MINI",
         price: 620.000,
         img: "./img/hoodies/5.1.jpg",
         img2: "./img/hoodies/5.2.jpg",
@@ -195,7 +195,7 @@ const hoodiesList = [
     },
     {
         id: "hd5",
-        name: "EGATOR® MAX",
+        name: "EGATOR MAX",
         price: 800.000,
         img: "./img/hoodies/6.1.jpg",
         img2: "./img/hoodies/6.2.jpg",
@@ -204,7 +204,7 @@ const hoodiesList = [
     },
     {
         id: "hd6",
-        name: "EGATOR® TRAVEL",
+        name: "EGATOR TRAVEL",
         price: 750.000,
         img: "./img/hoodies/7.1.jpg",
         img2: "./img/hoodies/7.2.jpg",
@@ -213,7 +213,7 @@ const hoodiesList = [
     },
     {
         id: "hd7",
-        name: "EGATOR® TIGER",
+        name: "EGATOR TIGER",
         price: 720.000,
         img: "./img/hoodies/8.1.jpg",
         img2: "./img/hoodies/8.2.jpg",
@@ -225,7 +225,7 @@ const hoodiesList = [
 const sweatersList = [
     {
         id: "st0",
-        name: "EGATOR® BLACK",
+        name: "EGATOR BLACK",
         price: 200.000,
         img: "./img/sweater/1.1.jpg",
         img2: "./img/sweater/1.2.jpg",
@@ -234,7 +234,7 @@ const sweatersList = [
     },
     {
         id: "st1",
-        name: "EGATOR® GREY",
+        name: "EGATOR GREY",
         price: 250.000,
         img: "./img/sweater/2.1.jpg",
         img2: "./img/sweater/2.2.jpg",
@@ -243,7 +243,7 @@ const sweatersList = [
     },
     {
         id: "st2",
-        name: "EGATOR® OLIVE",
+        name: "EGATOR OLIVE",
         price: 220.000,
         img: "./img/sweater/3.1.jpg",
         img2: "./img/sweater/3.2.jpg",
@@ -252,7 +252,7 @@ const sweatersList = [
     },
     {
         id: "st3",
-        name: "EGATOR® RED",
+        name: "EGATOR RED",
         price: 240.000,
         img: "./img/sweater/4.1.jpg",
         img2: "./img/sweater/4.2.jpg",
@@ -264,7 +264,7 @@ const sweatersList = [
 const productsList = [
     {
         id: "ts0",
-        name: "EGATOR® LION",
+        name: "EGATOR LION",
         price: 320.000,
         img: "./img/tshirts/1.1.jpg",
         img2: "./img/tshirts/1.2.jpg",
@@ -273,7 +273,7 @@ const productsList = [
     },
     {
         id: "ts1",
-        name: "EGATOR® CROCO",
+        name: "EGATOR CROCO",
         price: 330.000,
         img: "./img/tshirts/2.1.jpg",
         img2: "./img/tshirts/2.2.jpg",
@@ -282,7 +282,7 @@ const productsList = [
     },
     {
         id: "ts2",
-        name: "EGATOR® POPULAR",
+        name: "EGATOR POPULAR",
         price: 310.000,
         img: "./img/tshirts/3.1.jpg",
         img2: "./img/tshirts/3.2.jpg",
@@ -291,7 +291,7 @@ const productsList = [
     },
     {
         id: "ts3",
-        name: "EGATOR® DINOSAUR",
+        name: "EGATOR DINOSAUR",
         price: 350.000,
         img: "./img/tshirts/4.1.jpg",
         img2: "./img/tshirts/4.2.jpg",
@@ -300,7 +300,7 @@ const productsList = [
     },
     {
         id: "ts4",
-        name: "EGATOR® LOGO 2.0",
+        name: "EGATOR LOGO 2.0",
         price: 320.000,
         img: "./img/tshirts/5.1.jpg",
         img2: "./img/tshirts/5.2.jpg",
@@ -309,7 +309,7 @@ const productsList = [
     },
     {
         id: "ts5",
-        name: "EGATOR® FLORAL",
+        name: "EGATOR FLORAL",
         price: 300.000,
         img: "./img/tshirts/6.1.jpg",
         img2: "./img/tshirts/6.2.jpg",
@@ -318,7 +318,7 @@ const productsList = [
     },
     {
         id: "ts6",
-        name: "EGATOR® BTC",
+        name: "EGATOR BTC",
         price: 400.000,
         img: "./img/tshirts/7.1.jpg",
         img2: "./img/tshirts/7.2.jpg",
@@ -327,7 +327,7 @@ const productsList = [
     },
     {
         id: "ts7",
-        name: "EGATOR® SHARK",
+        name: "EGATOR SHARK",
         price: 300.000,
         img: "./img/tshirts/8.1.jpg",
         img2: "./img/tshirts/8.2.jpg",
@@ -336,7 +336,7 @@ const productsList = [
     },
     {
         id: "ts8",
-        name: "EGATOR® MILI",
+        name: "EGATOR MILI",
         price: 320.000,
         img: "./img/tshirts/9.1.jpg",
         img2: "./img/tshirts/9.2.jpg",
@@ -345,7 +345,7 @@ const productsList = [
     },
     {
         id: "ts9",
-        name: "EGATOR® COCA",
+        name: "EGATOR COCA",
         price: 335.000,
         img: "./img/tshirts/10.1.jpg",
         img2: "./img/tshirts/10.2.jpg",
@@ -354,7 +354,7 @@ const productsList = [
     },
     {
         id: "ts10",
-        name: "EGATOR® FRIEND",
+        name: "EGATOR FRIEND",
         price: 370.000,
         img: "./img/tshirts/11.1.jpg",
         img2: "./img/tshirts/11.2.jpg",
@@ -363,7 +363,7 @@ const productsList = [
     },
     {
         id: "ts11",
-        name: "EGATOR® GOD",
+        name: "EGATOR GOD",
         price: 315.000,
         img: "./img/tshirts/12.1.jpg",
         img2: "./img/tshirts/12.2.jpg",
@@ -372,7 +372,7 @@ const productsList = [
     },
     {
         id: "ts12",
-        name: "EGATOR® LOGO 3.0",
+        name: "EGATOR LOGO 3.0",
         price: 390.000,
         img: "./img/tshirts/13.1.jpg",
         img2: "./img/tshirts/13.2.jpg",
@@ -381,7 +381,7 @@ const productsList = [
     },
     {
         id: "ts13",
-        name: "EGATOR® LOCAL",
+        name: "EGATOR LOCAL",
         price: 450.000,
         img: "./img/tshirts/14.1.jpg",
         img2: "./img/tshirts/14.2.jpg",
@@ -390,7 +390,7 @@ const productsList = [
     },
     {
         id: "ts14",
-        name: "EGATOR® PLUS",
+        name: "EGATOR PLUS",
         price: 345.000,
         img: "./img/tshirts/15.1.jpg",
         img2: "./img/tshirts/15.2.jpg",
@@ -400,7 +400,7 @@ const productsList = [
     },
     {
         id: "ts15",
-        name: "EGATOR® DOLPHIN",
+        name: "EGATOR DOLPHIN",
         price: 360.000,
         img: "./img/tshirts/16.1.jpg",
         img2: "./img/tshirts/16.2.jpg",
@@ -409,7 +409,7 @@ const productsList = [
     },
     {
         id: "hd0",
-        name: "EGATOR® DORAE",
+        name: "EGATOR DORAE",
         price: 680.000,
         img: "./img/hoodies/1.1.jpg",
         img2: "./img/hoodies/1.2.jpg",
@@ -418,7 +418,7 @@ const productsList = [
     },
     {
         id: "hd1",
-        name: "EGATOR® ZIPPER",
+        name: "EGATOR ZIPPER",
         price: 750.000,
         img: "./img/hoodies/2.1.jpg",
         img2: "./img/hoodies/2.2.jpg",
@@ -427,7 +427,7 @@ const productsList = [
     },
     {
         id: "hd2",
-        name: "EGATOR® CREAM",
+        name: "EGATOR CREAM",
         price: 420.000,
         img: "./img/hoodies/3.1.jpg",
         img2: "./img/hoodies/3.2.jpg",
@@ -436,7 +436,7 @@ const productsList = [
     },
     {
         id: "hd3",
-        name: "EGATOR® COLLAB",
+        name: "EGATOR COLLAB",
         price: 530.000,
         img: "./img/hoodies/4.1.jpg",
         img2: "./img/hoodies/4.2.jpg",
@@ -445,7 +445,7 @@ const productsList = [
     },
     {
         id: "hd4",
-        name: "EGATOR® MINI",
+        name: "EGATOR MINI",
         price: 620.000,
         img: "./img/hoodies/5.1.jpg",
         img2: "./img/hoodies/5.2.jpg",
@@ -454,7 +454,7 @@ const productsList = [
     },
     {
         id: "hd5",
-        name: "EGATOR® MAX",
+        name: "EGATOR MAX",
         price: 800.000,
         img: "./img/hoodies/6.1.jpg",
         img2: "./img/hoodies/6.2.jpg",
@@ -463,7 +463,7 @@ const productsList = [
     },
     {
         id: "hd6",
-        name: "EGATOR® TRAVEL",
+        name: "EGATOR TRAVEL",
         price: 750.000,
         img: "./img/hoodies/7.1.jpg",
         img2: "./img/hoodies/7.2.jpg",
@@ -472,7 +472,7 @@ const productsList = [
     },
     {
         id: "hd7",
-        name: "EGATOR® TIGER",
+        name: "EGATOR TIGER",
         price: 720.000,
         img: "./img/hoodies/8.1.jpg",
         img2: "./img/hoodies/8.2.jpg",
@@ -481,7 +481,7 @@ const productsList = [
     },
     {
         id: "st0",
-        name: "EGATOR® BLACK",
+        name: "EGATOR BLACK",
         price: 200.000,
         img: "./img/sweater/1.1.jpg",
         img2: "./img/sweater/1.2.jpg",
@@ -490,7 +490,7 @@ const productsList = [
     },
     {
         id: "st1",
-        name: "EGATOR® GREY",
+        name: "EGATOR GREY",
         price: 250.000,
         img: "./img/sweater/2.1.jpg",
         img2: "./img/sweater/2.2.jpg",
@@ -499,7 +499,7 @@ const productsList = [
     },
     {
         id: "st2",
-        name: "EGATOR® OLIVE",
+        name: "EGATOR OLIVE",
         price: 220.000,
         img: "./img/sweater/3.1.jpg",
         img2: "./img/sweater/3.2.jpg",
@@ -508,7 +508,7 @@ const productsList = [
     },
     {
         id: "st3",
-        name: "EGATOR® RED",
+        name: "EGATOR RED",
         price: 240.000,
         img: "./img/sweater/4.1.jpg",
         img2: "./img/sweater/4.2.jpg",

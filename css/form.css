@@ -566,6 +566,31 @@ footer .logo-main {
     color: #fff;
 }
 
+#btn-price {
+    position: relative;
+}
+
+#btn-price:hover > ul{
+    display: block;
+}
+
+#btn-price ul {
+    /* display: none; */
+    top: 37px;
+    left: 0;
+    width: 120px;
+    background: #fff;
+    position: absolute;
+    z-index: 10;
+    display: none;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, .2);
+    border: 1px solid #ccc;
+}
+
+#btn-price + div{
+    /* display: block; */
+}
+
 
 /* Phan trang */
 
@@ -579,9 +604,16 @@ footer .logo-main {
 .pagination-button {
     cursor: pointer;
     width: 20px;
-    color: red;
     font-size: 28px;
 }
+
+.pagination-button:hover,
+#number-page li:hover,
+#number-page li:hover a {
+    background: var(--color-primary);
+    color: #fff;
+    /* border: 1px solid var(--color-primary); */
+}   
 
 .number-page {
     display: flex;
@@ -592,12 +624,8 @@ footer .logo-main {
     cursor: pointer;
     text-align: center;
     padding: 4px 8px;
-    border: 1px solid #606063;
+    border: 1px solid var(--color-primary);
     border-radius: 10px 10px 10px 10px;
-}
-
-#page {
-    color: #7380EC;
 }
 
 /* ========== CHANGE PAGES ========== */

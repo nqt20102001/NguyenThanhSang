@@ -60,6 +60,10 @@ body {
     overflow-x: hidden;
 }
 
+i {
+    background: transparent;
+}
+
 a {
     color: var(--color-dark);
 }

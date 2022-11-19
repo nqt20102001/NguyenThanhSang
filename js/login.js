@@ -100,25 +100,33 @@ if (getUser) {
     let t1 = document.querySelector('.user')
     let t2 = document.querySelector('.logout')
     t1.innerHTML = `
-    <div style="color: pink; font-size: 18px;">
-        hello <br> ${getUser}
+    <div >
+        <p style="font-size: 1.2rem;">Hey, <b>${getUser}</b></p>
     </div>
     `
     t2.innerHTML = `
-    <div style="margin-right: 22px;">
-    <a href="">Đăng xuất</a>
+    <li>
+        <button id="btn-logout">
+            <i class="fa-solid fa-right-from-bracket"></i>
+        </button>
     <style>
-    a {
-        text-decoration: none;
-        color: pink;
-        font-size: 18px;
+        #navbar li button#btn-logout:hover,
+        #navbar li button#btn-logout.active {
+            color: red;
         }
 
-    a:hover {
-        color: black;
-    }
+        #navbar li button#btn-logout.active::after,
+        #navbar li button#btn-logout:hover::after {
+            content: "";
+            width: 40%;
+            height: 2px;
+            background-color: red;
+            position: absolute;
+            bottom: -4px;
+            left: 30%;
+        }   
     </style>
-    </div>
+    </li>   
     `
 }
 

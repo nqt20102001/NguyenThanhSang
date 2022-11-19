@@ -189,14 +189,20 @@ document.querySelector('#menu-wrapper').innerHTML = `
         <li id="btn-hoodies">HOODIE</li>
         <li id="btn-tshirts">TSHIRT</li>
         <li id="btn-sweaters">SWEATER</li>
-        <li id="btn-priceT">Thấp -> Cao</li>
-        <li id="btn-priceC">Cao -> Thấp</li>
+        <li id="btn-price">PRICE <i style="font-size: .8rem;" class="fa-solid fa-chevron-down"></i>
+            <ul>
+                    <li id="btn-priceT">Low to High</li>
+                    <li id="btn-priceC">High to Low</li>
+            </ul>
+        </li>
+        
     </ul>`
 
 document.querySelector('#shopp').innerHTML = `
     <section id="product1" class="section-p1" style="text-align: center;">
         <div class="pro-container"></div>
     </section>
+
     <nav class="pagination-container" id="an">
         <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
             &lt;
