@@ -27,11 +27,34 @@ document.querySelector('head').innerHTML = `
     <title>Admin</title>
     `
 
-// document.querySelector('#product-management').innerHTML = `
+document.querySelector('aside').innerHTML = `
+    <div class="top">
+        <div class="logo-main">
+            <a href="#" class="logo">
+                <img src="./img/logo.png" alt="">
+                <h2>EGA<span>TOR</span></h2>
+            </a>
+        </div>
+        <div class="close" id="close-btn">
+            <span class="material-symbols-sharp">close</span>
+        </div>
+    </div>
 
-// `
-
-
-// document.querySelector('#add-product').innerHTML = `
-
-// `
+    <div class="sidebar">
+        <a href="" class="active">
+            <span class="material-symbols-sharp">inventory</span>
+            <h3>Products</h3>
+        </a>
+        <a href="">
+            <span class="material-symbols-sharp">add</span>
+            <h3>Add Product</h3>
+        </a>
+        <a href="">
+            <span class="material-symbols-sharp">person</span>
+            <h3>Customers</h3>
+        </a>
+        <a href="">
+            <span class="material-symbols-sharp">receipt_long</span>
+            <h3>Orders</h3>
+        </a>
+    </div>`

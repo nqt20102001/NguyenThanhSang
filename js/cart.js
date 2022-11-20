@@ -1,13 +1,3 @@
-// t coppy qua file khac cho dễ đọc
-// viết chung rối quá
-
-
-
-// để t làm giỏ hàng luôn cho đừng sửa code của t
-// m làm như cc
-
-
-
 var btnAddCarts = document.querySelectorAll('#btn-add-cart');
 var arrCart = new Array
 
@@ -19,7 +9,6 @@ function addToCart(x) {
         var productPrice = product.querySelector('#price-product').innerText;
         var sl_hienTai = parseInt(product.querySelector('#sl-product').value)
 
-        var kt = 0;
         for (let i = 0; i < arrCart.length; i++) {
             if (productName === arrCart[i][1]) {
                 alert("Đã thêm.")
@@ -38,8 +27,7 @@ function addToCart(x) {
         localStorage.setItem("arrCart", JSON.stringify(arrCart))
     }
     else {
-        
-        alert("Đăng nhập đi thằng lz")
+        alert("Vui lòng đăng nhập!")
         // let lg_wr = document.querySelector('.login')
         // lg_wr.style.visibility = "visible"
     }

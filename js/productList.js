@@ -1,4 +1,4 @@
-const tshitsList = [
+var tshitsList = [
     {
         id: "ts0",
         name: "EGATOR LION",
@@ -147,7 +147,7 @@ const tshitsList = [
 ]
 
 
-const hoodiesList = [
+var hoodiesList = [
     {
         id: "hd0",
         name: "EGATOR DORAE",
@@ -222,7 +222,7 @@ const hoodiesList = [
     },
 ]
 
-const sweatersList = [
+var sweatersList = [
     {
         id: "st0",
         name: "EGATOR BLACK",
@@ -261,7 +261,7 @@ const sweatersList = [
     },
 ]
 
-const productsList = [
+var productsList = [
     {
         id: "ts0",
         name: "EGATOR LION",
@@ -517,4 +517,10 @@ const productsList = [
     },
 ]
 
-export  {tshitsList,hoodiesList, sweatersList, productsList}
+if (localStorage.getItem('productsList') === null) {
+    console.log("Push data!");
+    localStorage.setItem('productsList', JSON.stringify(productsList))
+    localStorage.setItem("tshitsList", JSON.stringify(tshitsList))
+    localStorage.setItem("hoodiesList", JSON.stringify(hoodiesList))
+    localStorage.setItem("sweatersList", JSON.stringify(sweatersList))
+}

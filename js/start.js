@@ -8,8 +8,7 @@ document.querySelector('#header').innerHTML = `
 
     <div class="search-wrapper">
         <div class="search-main" id="search-main">
-            mới sửa nại
-            <input type="text" id="search-item" placeholder="Nhập tên hay thể loại gì cũng đc vd: hoodie, egator lion">
+            <input type="text" id="search-item" placeholder="Vd: hoodie, egator lion...">
         </div>
         <button id="btn-find">
             <i class="fa-solid fa-magnifying-glass"></i>

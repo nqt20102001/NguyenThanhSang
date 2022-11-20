@@ -1,5 +1,7 @@
-import { tshitsList, hoodiesList, sweatersList, productsList } from "./productList.js";
-
+productsList = JSON.parse(localStorage.getItem('productsList'))
+sweatersList = JSON.parse(localStorage.getItem('sweatersList'))
+hoodiesList = JSON.parse(localStorage.getItem('hoodiesList'))
+tshitsList = JSON.parse(localStorage.getItem('tshitsList'))
 
 // ======== OPEN NAVBAR IN MOBILE =========
 const bar = document.getElementById('bar');
