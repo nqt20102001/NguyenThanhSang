@@ -133,14 +133,14 @@ main {
     gap: 2rem;
     text-align: right;
 }
-
+/* 
 .top .right .profile p {
     margin: 0px 0px 8px 0;
 }
 
 .top .right .profile a:hover {
     color: var(--color-primary);
-}
+} */
 
 
 
@@ -150,83 +150,88 @@ main {
     border-radius: 50%;
     overflow: hidden;
     border: 1px solid #ccc;
+}   
+
+
+
+#product-management {
+    /* display: none; */
 }
 
-
-#cart-admin {
+#product-admin {
     overflow: hidden;
     padding: 0 0 0 0;
     margin: 20px 0 0 0;
 }
 
-#cart-admin table {
+#product-admin table {
     width: 100%;
     border-collapse: collapse;
     table-layout: fixed;
     white-space: nowrap;
 }
 
-#cart-admin table img {
+#product-admin table img {
     width: 70px;
     margin: auto;
     border: 1px solid var(--color-info-dark);
 }
 
-#cart-admin table td:nth-child(1) {
+#product-admin table td:nth-child(1) {
     width: 20%;
     text-align: center;
 }
 
-#cart-admin table td:nth-child(2) {
+#product-admin table td:nth-child(2) {
     width: 35%;
     text-align: center;
 }
 
-#cart-admin table td:nth-child(3) {
+#product-admin table td:nth-child(3) {
     width: 15%;
     text-align: center;
 }
 
-#cart-admin table td:nth-child(4)
+#product-admin table td:nth-child(4)
 {
     width: 15%;
     text-align: center;
 }
 
-#cart-admin table td:nth-child(5)
+#product-admin table td:nth-child(5)
 {
     width: 15%;
     text-align: center;
 }
 
-#cart-admin table thead {
+#product-admin table thead {
     border: 1px solid var(--color-info-dark);
     border-left: none;
     border-right: none;
 }
 
-#cart-admin table thead td {
+#product-admin table thead td {
     font-weight: 700;
     text-transform: uppercase;
     padding: 18px 0;
     font-size: 1rem;
 }
 
-#cart-admin table tbody td {
+#product-admin table tbody td {
     padding-top: 15px;
     font-size: 1rem;
     text-align: center;
 }
 
-#cart-admin table tbody tr:last-child {
+#product-admin table tbody tr:last-child {
     border-bottom: 1px solid var(--color-info-dark);
 }
 
-#cart-admin table tbody tr:last-child td {
+#product-admin table tbody tr:last-child td {
     padding-bottom: 15px;
 }
 
-#cart-admin button {
+#product-admin button {
     color: #000;
     padding: 10px;
     background: transparent;
@@ -242,12 +247,8 @@ main {
         'opsz' 48
 }
 
-#product-management {
-    display: none;
-}
-
 #add-product {
-    display: flex;
+    display: none;
     flex-direction: column;
 }
 
@@ -322,4 +323,97 @@ main {
 
 .add-product div h3 {
     font-weight: 600;
+}
+
+
+/* ========== */
+#orders-admin {
+    overflow: hidden;
+    padding: 0 0 0 0;
+    margin: 20px 0 0 0;
+}
+
+#orders-admin table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    white-space: nowrap;
+}
+
+#orders-admin table img {
+    width: 70px;
+    margin: auto;
+    border: 1px solid var(--color-info-dark);
+}
+
+#orders-admin table td:nth-child(1) {
+    width: 10%;
+    text-align: center;
+}
+
+#orders-admin table td:nth-child(2) {
+    width: 25%;
+    text-align: center;
+}
+
+#orders-admin table td:nth-child(3) {
+    width: 15%;
+    text-align: center;
+}
+
+#orders-admin table td:nth-child(4)
+{
+    width: 15%;
+    text-align: center;
+}
+
+#orders-admin table td:nth-child(5)
+{
+    width: 10%;
+    text-align: center;
+}
+
+#orders-admin table td:nth-child(6)
+{
+    width: 25%;
+    text-align: center;
+}
+
+#orders-admin table thead {
+    border: 1px solid var(--color-info-dark);
+    border-left: none;
+    border-right: none;
+}
+
+#orders-admin table thead td {
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 18px 0;
+    font-size: 1rem;
+}
+
+#orders-admin table tbody td {
+    padding-top: 15px;
+    font-size: 1rem;
+    text-align: center;
+}
+
+#orders-admin table tbody td p {
+    display: flex;
+    flex-direction: column;
+}
+
+#orders-admin table tbody tr:last-child {
+    border-bottom: 1px solid var(--color-info-dark);
+}
+
+#orders-admin table tbody tr:last-child td {
+    padding-bottom: 15px;
+}
+
+#orders-admin button {
+    color: #000;
+    padding: 10px;
+    background: transparent;
+    cursor: pointer;
 }
