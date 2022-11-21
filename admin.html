@@ -26,47 +26,43 @@
                     <div class="type-add">
                         <h3 for="">Type: </h3>
                         <select name="" id="select_type">
-                            <option value="tshirt">tshirt</option>
-                            <option value="hoodie">hoodie</option>
-                            <option value="sweater">sweater</option>
+                            <option value="ts">tshirt</option>
+                            <option value="hd">hoodie</option>
+                            <option value="st">sweater</option>
                         </select>
                     </div>
                     <div class="name-add">
                         <h3 for="">Product Name: </h3>
-                        <input type="text">
+                        <input type="text" id="select_name">
                     </div>
                     <div class="price-add">
                         <h3 for="">Product Price: </h3>
-                        <input type="text">
-                    </div>
-                    <div class="id-add">
-                        <h3 for="">Product ID: </h3>
-                        <input type="text">
+                        <input type="text" id="select_price">
                     </div>
                     <br>
                 </div>
                 <form runat="server" id="loadImg">
                     <div class="img-add">
                         <h3 for="">Main Image: </h3>
-                        <input accept="image/" type='file' id="imgInp" />
+                        <input accept="image/*" type='file' id="imgInp" />
                     </div>
                     <div class="img-add">
                         <h3 for="">Image 2: </h3>
-                        <input accept="image/" type='file' id="imgInp" />
+                        <input accept="image/" type='file' id="imgInp2" />
                     </div>
                     <div class="img-add">
                         <h3 for="">Image 3: </h3>
-                        <input accept="image/" type='file' id="imgInp" />
+                        <input accept="image/" type='file' id="imgInp3" />
                     </div>
                     <div class="img-add">
                         <h3 for="">Image 4: </h3>
-                        <input accept="image/" type='file' id="imgInp" />
+                        <input accept="image/" type='file' id="imgInp4" />
                     </div>
                 </form>
-                <div class="add-product">
-                    <div>
+                <div class="add-product" id="changeFunc">
+                    <div onclick="themPrc()">
                         <span class="material-symbols-sharp">add</span>
-                        <h3>Add Product</h3>
+                        <h3 id="addAndUpdate">Add Product</h3>
                     </div>
                 </div>
             </div>

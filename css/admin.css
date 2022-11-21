@@ -232,6 +232,7 @@ main {
 #add-product .info-product div {
     display: flex;
     flex-direction: column;
+    margin: 0 50px;
 }
 
 .info-product {
@@ -240,19 +241,27 @@ main {
     margin-bottom: 30px;
 }
 
-.name-add input,
-.price-add input,
-.id-add input,
 #select_type {
     height: 40px;
-    width: 80%;
     border: 1px solid #ccc;
     border-radius: 12px;
     font-size: 1.2rem;
     font-weight: 600;
-    margin-top: 15px;
+    margin-top: 16px;
     padding: 0 10px;
 }
+
+.name-add input,
+.price-add input {
+    height: 40px;
+    border: 1px solid #ccc;
+    border-radius: 12px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    padding: 0 10px;
+    margin: 16px 0;
+}
+
 
 .type-add {
     margin-right: 20px;
