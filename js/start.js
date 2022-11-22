@@ -205,11 +205,11 @@ document.querySelector('#shopp').innerHTML = `
     </section>
 
     <nav class="pagination-container flex-center" id="an">
-        <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
+        <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page" style="background: transparent">
             &lt;
         </button>
         <div class="number-page" id="number-page"></div>
-        <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page">
+        <button class="pagination-button" id="next-button" aria-label="Next page" title="Next page" style="background: transparent">
             &gt;
         </button>
     </nav>`
