@@ -251,7 +251,7 @@ input[name="product"] {
 
 input[name="product"]:checked+.modal {
     display: flex;
-    z-index: 10;
+    z-index: 1000;
 }
 
 .modal label {
@@ -313,7 +313,6 @@ input[name="product"]:checked+.modal {
 
 .single-pro-details {
     flex: 1;
-    padding-top: 30px;
     text-align: left;
 }
 
@@ -323,22 +322,32 @@ input[name="product"]:checked+.modal {
 }
 
 .single-pro-details h5 {
-    padding: 40px 0 20px 0;
-    font-size: 15px;
-    padding-top: 7px;
+    margin-bottom: 20px;
+    font-size: 1rem;
     font-weight: 700;
 }
 
-.single-pro-details h6 {
+.single-pro-details ul {
     font-size: 1.2rem;
+    margin: 20px 0;
+    font-weight: 600;
+}
+
+.single-pro-details li {
+    font-size: 1rem;
+    margin-top: 10px;
+    margin-left: 20px;
+    list-style-type: disc;
+    font-weight: 400;
+
 }
 
 .single-pro-details input {
     width: 50px;
-    height: 47px;
-    padding-left: 10px;
-    font-size: 16px;
-    margin-right: 10px;
+    height: 43.8px;
+    padding: 0 10px;
+    font-size: 1.1rem;
+    margin-right: 20px;
 }
 
 .single-pro-details input:focus {
@@ -459,7 +468,7 @@ input[name="product"]:checked+.modal {
 #subtotal table td {
     border: solid 1px var(--color-info-dark);
     padding: 10px;
-    font-size: 16px;
+    font-size: 1rem;
 }
 
 #price_css {
@@ -467,7 +476,7 @@ input[name="product"]:checked+.modal {
 }
 
 .btn-totalCart {
-    margin: 10px 20px;
+    margin: 10px 20px 0 0;
 }
 
 /* ============== FOOTER ============== */

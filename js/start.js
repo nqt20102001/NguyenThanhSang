@@ -44,6 +44,7 @@ document.querySelector('#header').innerHTML = `
         <button id="btn-cart-mobile">
             <i class="fa-solid fa-cart-shopping"></i>
         </button>
+        
         <i id="bar" class="fa-solid fa-bars"></i>
     </div>
     <!-- in MOBILBE -->`
@@ -123,7 +124,7 @@ document.querySelector('.ft').innerHTML = `
         <div class="col">
 
             <h4>CONTACT</h4>
-            <p><strong>Address:</strong> 273 An Dương Vương, Phường 3, Quận 5, TP. Hồ Chí Minh</p>
+            <p><strong>Address:</strong> 273 An Dương Vương, P.3, Q.5, TP. Hồ Chí Minh</p>
             <p><strong>Phone:</strong> 0867804787</p>
             <p><strong>Hours:</strong> 10:00 - 20:00</p>
 

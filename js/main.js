@@ -65,6 +65,7 @@ btnCart.addEventListener('click', () => {
 btnCartMobile.addEventListener('click', () => {
     shop.style.display = 'none';
     cart.style.display = 'block';
+    menuWrapper.style.display = 'none';
 })
 
 
@@ -187,6 +188,18 @@ function out(art) {
                                 <h5 id="price-product">${product.price}.000</h5>
                                 <input id="sl-product" type="number" min=1 value="1">
                                 <button class="normal" id="btn-add-cart" onclick="addToCart(this)">Add to cart</button>
+                                <ul>
+                                    Product details:
+                                    <li>Material: thick 2-way cotton</li>
+                                    <li>Standard form, limit wrinkles</li>
+                                    <li>Machine wash does not stretch</li>
+                                </ul>
+                                <ul>
+                                    Methods of preservation:
+                                    <li>Use less detergent and do not use strong detergents</li>
+                                    <li>Do not soak in water for too long</li>
+                                    <li>Avoid direct sunlight</li>
+                                </ul>
                             </div>
 
                         </div>

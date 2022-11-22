@@ -86,7 +86,7 @@ function themPrc() {
     let add_name = document.getElementById('select_name').value
     let add_price = document.getElementById('select_price').value
 
-    productsList.push({ id: `${add_id}`, name: `${add_name}`, price: `${add_price}`, img: `${add_img_m}`, img2: `${add_img_2}`, img3: `${add_img_3}`, img4: `${add_img_4}` })
+    productsList.push({ id: `${add_id}`, name: `${add_name}`, price: `${add_price}`, img: `${add_img_m}` })
     localStorage.setItem('productsList', JSON.stringify(productsList))
 
     if (add_id === "ts") {
