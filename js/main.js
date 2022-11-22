@@ -167,7 +167,7 @@ function out(art) {
 
                             <div class="single-pro-img">
                                 <img src="${product.img}" style="width: 100%;" class="main-img" alt="">
-                                <div class="sm-img-group">
+                                <div class="sm-img-group flex-space">
                                     <div class="sm-img-col">
                                         <img src="${product.img}" style="width: 100%;" class="sm-img" alt="">
                                     </div>

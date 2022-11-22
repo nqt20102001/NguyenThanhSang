@@ -16,7 +16,7 @@ document.querySelector('#header').innerHTML = `
     </div>
 
     <div>
-        <ul id="navbar">
+        <ul id="navbar" class="flex-center">
             <li>
                 <button id="btn-shop" class="active">
                     <i class="fa-solid fa-house"></i>
@@ -185,7 +185,7 @@ document.querySelector('head').innerHTML = `
     <title>Store</title>`
 
 document.querySelector('#menu-wrapper').innerHTML = `
-    <ul class="menu-main">
+    <ul class="menu-main flex-space">
         <li id="btn-alls" class="active">ALL</li>
         <li id="btn-hoodies">HOODIE</li>
         <li id="btn-tshirts">TSHIRT</li>
@@ -204,7 +204,7 @@ document.querySelector('#shopp').innerHTML = `
         <div class="pro-container"></div>
     </section>
 
-    <nav class="pagination-container" id="an">
+    <nav class="pagination-container flex-center" id="an">
         <button class="pagination-button" id="prev-button" aria-label="Previous page" title="Previous page">
             &lt;
         </button>
