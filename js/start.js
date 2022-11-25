@@ -55,7 +55,7 @@ document.querySelector('.dangNhap').innerHTML = `
         <div class="login_wrapper">
             <div class="login_mid">
                 <div class="wapper-heading">
-                    <h1>LOGIN</h1>
+                    <h1>SIGN IN</h1>
                 </div>
                 <form>
                     <div class="input__field">
@@ -67,12 +67,14 @@ document.querySelector('.dangNhap').innerHTML = `
                     <div class="input__field">
                         <input id="password" type="password" placeholder="Password" />
                     </div>
-                    <div style="display: flex; justify-content: end;">
-                        <a class="signup-link" onclick="eLogin()">Đăng kí</a>
+                    <div class="flex-center" style="margin-bottom: 10px;">
+                        <button class="btn btn-login">Sign in</button>
                     </div>
-                    <div style="display: flex; justify-content: center;">
-                        <button class="btn btn-login">Đăng Nhập</button>
+                    <div class="flex-center">
+                        <p>Create your account:</p>
+                        <a class="signup-link" onclick="eLogin()">Sign up</a>
                     </div>
+                    
                 </form>
             </div>
         </div>
@@ -82,7 +84,7 @@ document.querySelector('.dangNhap').innerHTML = `
         <div class="signup_wrapper">
             <div class="signup_mid">
                 <div class="wapper-heading">
-                    <h1>SIGN UP</h1>
+                    <h1>CREATE ACCOUNT</h1>
                 </div>
                 <form>
                     <div class="input__field">
@@ -97,11 +99,13 @@ document.querySelector('.dangNhap').innerHTML = `
                     <div class="input__field">
                         <input id="password_signup" type="password" placeholder="Confirm Password" />
                     </div>
-                    <div style="display: flex; justify-content: end;">
-                        <a class="login-link" onclick="eSignup()">Đăng nhập</a>
+                    
+                    <div class="flex-center" style="margin-bottom: 10px;">
+                        <button class="btn btn-signup">Sign up</button>
                     </div>
-                    <div style="display: flex; justify-content: center;">
-                        <button class="btn btn-signup">Đăng Kí</button>
+                    <div class="flex-center">
+                        <p>Already have an account?</p>
+                        <a class="login-link" onclick="eSignup()">Sign in</a>
                     </div>
                 </form>
             </div>

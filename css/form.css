@@ -83,6 +83,7 @@
 
 /* ========== NAV BAR =========== */
 
+
 #navbar li {
     padding: 0 20px;
     position: relative;
@@ -421,7 +422,7 @@ input[name="product"]:checked+.modal {
 }
 
 #subtotal {
-    width: 30%;
+    width: 50%;
     margin: 30px 0;
 }
 

@@ -1,3 +1,4 @@
+
 .login_mid .btn,
 .signup_mid .btn {
     background: var(--color-primary);
@@ -23,8 +24,7 @@
 .login_mid .signup-link,
 .signup_mid .login-link {
     display: block;
-    transform: translateX(120px);
-    color: var(--bg--color);
+    /* transform: translateX(120px); */
     cursor: pointer;
 }
 
@@ -41,6 +41,7 @@
 .login_mid h1,
 .signup_mid h1 {
     text-align: center;
+    margin: 0;
     margin-bottom: 18px;
     font-size: 2rem;
     font-weight: 600;
@@ -64,7 +65,7 @@
 
 .login_mid,
 .signup_mid {
-    margin: 60px auto;
+    margin: 30px auto 50px;
 }
 
 .login,
@@ -79,7 +80,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    z-index: 10;
+    z-index: 1000;
     visibility: hidden;
     background-color: rgba(0, 0, 0, 0.6);
 }
@@ -96,4 +97,22 @@
     border-radius: 10px;
     display: flex;
     position: relative;
+}
+
+.dangNhap p {
+    margin: 0;
+    margin-right: 10px;
+}
+.login-link,
+.signup-link {
+    text-decoration: underline;
+    color: var(--color-primary);
+    font-size: 1rem;
+}
+
+@media (max-width: 477px) {
+    .login_wrapper,
+    .signup_wrapper {
+        width: calc(100% - 40px);
+    }
 }

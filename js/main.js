@@ -20,7 +20,6 @@ if (close) {
     })
 }
 
-
 // ======= ACTIVE BUTTON NAVBAR =========
 const tabs = document.querySelectorAll("#navbar li button");
 tabs.forEach(tab => {

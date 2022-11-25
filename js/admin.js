@@ -3,6 +3,8 @@ sweatersList = JSON.parse(localStorage.getItem('sweatersList'))
 hoodiesList = JSON.parse(localStorage.getItem('hoodiesList'))
 tshitsList = JSON.parse(localStorage.getItem('tshitsList'))
 
+
+
 function shop() {
     let text = ""
     productsList.forEach(product => {
@@ -168,3 +170,4 @@ function themPrc() {
 //     // localStorage.setItem('sweatersList', JSON.stringify(sweatersList))
 //     // localStorage.setItem('hoodiesList', JSON.stringify(hoodiesList))
 // }
+
