@@ -20,6 +20,10 @@ function shop() {
 }
 shop()
 
+
+
+// Xoa
+
 function xoaPrc(x) {
     let xoa = x.parentElement.parentElement
     let tenSp = xoa.children[1].innerText
@@ -49,35 +53,54 @@ function xoaPrc(x) {
 }
 
 
-var add_img_m
-imgInp.onchange = evt => {
-    const [file] = imgInp.files
-    if (file) {
-        add_img_m = URL.createObjectURL(file)
-    }
-}
-// var add_img_2
-// imgInp2.onchange = evt => {
-//     const [file] = imgInp2.files
-//     if (file) {
-//         add_img_2 = URL.createObjectURL(file)
-//     }
-// }
-// var add_img_3
-// imgInp3.onchange = evt => {
-//     const [file] = imgInp3.files
-//     if (file) {
-//         add_img_3 = URL.createObjectURL(file)
-//     }
-// }
-// var add_img_4
-// imgInp4.onchange = evt => {
-//     const [file] = imgInp4.files
-//     if (file) {
-//         add_img_4 = URL.createObjectURL(file)
-//     }
-// }
 
+// Them
+
+var add_img_m = ""
+var add_img_2 = ""
+var add_img_3 = ""
+var add_img_4 = ""
+
+imgInp.addEventListener("change", function () {
+    const files = imgInp.files[0];
+    if (files) {
+        const fileReader = new FileReader();
+        fileReader.readAsDataURL(files);
+        fileReader.addEventListener("load", function () {
+            add_img_m = this.result
+        })
+    }
+})
+imgInp2.addEventListener("change", function () {
+    const files = imgInp2.files[0];
+    if (files) {
+        const fileReader = new FileReader();
+        fileReader.readAsDataURL(files);
+        fileReader.addEventListener("load", function () {
+            add_img_2 = this.result
+        })
+    }
+})
+imgInp3.addEventListener("change", function () {
+    const files = imgInp3.files[0];
+    if (files) {
+        const fileReader = new FileReader();
+        fileReader.readAsDataURL(files);
+        fileReader.addEventListener("load", function () {
+            add_img_3 = this.result
+        })
+    }
+})
+imgInp4.addEventListener("change", function () {
+    const files = imgInp4.files[0];
+    if (files) {
+        const fileReader = new FileReader();
+        fileReader.readAsDataURL(files);
+        fileReader.addEventListener("load", function () {
+            add_img_4 = this.result
+        })
+    }
+})
 
 function themPrc() {
     alert("Đã thêm!")
@@ -86,25 +109,28 @@ function themPrc() {
     let add_name = document.getElementById('select_name').value
     let add_price = document.getElementById('select_price').value
 
-    productsList.push({ id: `${add_id}`, name: `${add_name}`, price: `${add_price}`, img: `${add_img_m}` })
+    productsList.push({ id: add_id, name: add_name, price: add_price, img: add_img_m, img2: add_img_2, img3: add_img_3, img4: add_img_4 })
     localStorage.setItem('productsList', JSON.stringify(productsList))
 
     if (add_id === "ts") {
-        tshitsList.push({ id: `${add_id}`, name: `${add_name}`, price: `${add_price}`, img: `${add_img_m}`, img2: `${add_img_2}`, img3: `${add_img_3}`, img4: `${add_img_4}` })
+        tshitsList.push({ id: add_id, name: add_name, price: add_price, img: add_img_m, img2: add_img_2, img3: add_img_3, img4: add_img_4 })
         localStorage.setItem('tshitsList', JSON.stringify(tshitsList))
     }
     else if (add_id === "hd") {
-        hoodiesList.push({ id: `${add_id}`, name: `${add_name}`, price: `${add_price}`, img: `${add_img_m}`, img2: `${add_img_2}`, img3: `${add_img_3}`, img4: `${add_img_4}` })
+        hoodiesList.push({ id: add_id, name: add_name, price: add_price, img: add_img_m, img2: add_img_2, img3: add_img_3, img4: add_img_4 })
         localStorage.setItem('hoodiesList', JSON.stringify(hoodiesList))
     }
     else if (add_id === "st") {
-        sweatersList.push({ id: `${add_id}`, name: `${add_name}`, price: `${add_price}`, img: `${add_img_m}`, img2: `${add_img_2}`, img3: `${add_img_3}`, img4: `${add_img_4}` })
+        sweatersList.push({ id: add_id, name: add_name, price: add_price, img: add_img_m, img2: add_img_2, img3: add_img_3, img4: add_img_4 })
         localStorage.setItem('sweatersList', JSON.stringify(sweatersList))
     }
 
     shop()
 }
 
+
+
+// Sua
 
 // function suaPrc(x) {
 //     let sua = x.parentElement.parentElement

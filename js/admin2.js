@@ -1,5 +1,5 @@
 function xAdmin() {
-    window.location.href = "shop.html"
+    window.location.href = "index.html"
 }
 
 document.querySelector('head').innerHTML = `
