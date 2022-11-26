@@ -1,7 +1,14 @@
 productsList = JSON.parse(localStorage.getItem('productsList'))
-sweatersList = JSON.parse(localStorage.getItem('sweatersList'))
-hoodiesList = JSON.parse(localStorage.getItem('hoodiesList'))
-tshitsList = JSON.parse(localStorage.getItem('tshitsList'))
+
+var hoodiesList = productsList.filter(function (product) {
+    return product.id == "hd"
+})
+var sweatersList = productsList.filter(function (product) {
+    return product.id == "st"
+})
+var tshitsList = productsList.filter(function (product) {
+    return product.id == "ts"
+})
 
 // ======== OPEN NAVBAR IN MOBILE =========
 const bar = document.getElementById('bar');

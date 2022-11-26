@@ -24,7 +24,7 @@
             </div>
 
             <div id="add-product">
-                <h1 class="flex-center">ADD PRODUCT</h1>
+                <h1 class="flex-center" id="flex-center">ADD PRODUCT</h1>
                 <div class="info-product">
                     <div class="type-add">
                         <h3 for="">Type: </h3>
@@ -47,18 +47,22 @@
                 <form runat="server" id="loadImg">
                     <div class="img-add">
                         <h3 for="">Main Image: </h3>
+                        <img src="" alt="" id="suaAnh">
                         <input accept="image/*" type='file' id="imgInp" />
                     </div>
                     <div class="img-add">
                         <h3 for="">Image 2: </h3>
+                        <img src="" alt="" id="suaAnh2">
                         <input accept="image/" type='file' id="imgInp2" />
                     </div>
                     <div class="img-add">
                         <h3 for="">Image 3: </h3>
+                        <img src="" alt="" id="suaAnh3">
                         <input accept="image/" type='file' id="imgInp3" />
                     </div>
                     <div class="img-add">
                         <h3 for="">Image 4: </h3>
+                        <img src="" alt="" id="suaAnh4">
                         <input accept="image/" type='file' id="imgInp4" />
                     </div>
                 </form>
@@ -70,7 +74,7 @@
                 </div>
             </div>
 
-            <div id="product-management">
+            <div id="product-management" style="margin-top: 120px;">
                 <h1 class="flex-center">LIST PRODUCT</h1>
                 <div id="product-admin">
                     <table width:"100%">
