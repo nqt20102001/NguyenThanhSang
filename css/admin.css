@@ -411,3 +411,15 @@ main .top {
     background: transparent;
     cursor: pointer;
 }
+
+
+
+
+
+#orders-management {
+    display: none;
+}
+
+a {
+    cursor: pointer;
+}

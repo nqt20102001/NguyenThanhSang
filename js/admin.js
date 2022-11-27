@@ -83,11 +83,15 @@ imgInp4.addEventListener("change", function () {
 })
 
 function themPrc() {
-    alert("Đã thêm!")
     let add_id = document.getElementById('select_type').value
     let add_name = document.getElementById('select_name').value
     let add_price = document.getElementById('select_price').value
 
+    if (add_name === "" || add_price === "") {
+        alert("Vui lòng nhập đầy đủ thông tin!")
+        return
+    }
+    alert("Đã thêm!")
     productsList.push({ id: add_id, name: add_name, price: add_price, img: add_img_m, img2: add_img_2, img3: add_img_3, img4: add_img_4 })
     localStorage.setItem('productsList', JSON.stringify(productsList))
     shop()
@@ -108,6 +112,14 @@ function suaPrc(x) {
                 </div>`
             document.getElementById('flex-center').innerHTML = `
                 UPDATE PRODUCT`
+            document.getElementById('deleteImg').innerHTML = `
+                <p onclick="deleteImg()">x</p>`
+            document.getElementById('deleteImg2').innerHTML = `
+                <p onclick="deleteImg2()">x</p>`
+            document.getElementById('deleteImg3').innerHTML = `
+                <p onclick="deleteImg3()">x</p>`
+            document.getElementById('deleteImg4').innerHTML = `
+                <p onclick="deleteImg4()">x</p>`
 
             document.getElementById('select_type').value = product.id
             document.getElementById('select_name').value = product.name
@@ -119,12 +131,18 @@ function suaPrc(x) {
 
             let suaPrc2 = document.querySelector('#suaPrc2')
             let vt = i
+
+            add_img_m = product.img
+            add_img_2 = product.img2
+            add_img_3 = product.img3
+            add_img_4 = product.img4
+
             suaPrc2.addEventListener("click", function (e) {
                 alert("Cập nhật thành công!")
                 a = document.getElementById('select_type').value
                 b = document.getElementById('select_name').value
                 c = document.getElementById('select_price').value
-                let item = { id: a, name: b, price: c, img: product.img, img2: product.img2, img3: product.img3, img4: product.img4 }
+                let item = { id: a, name: b, price: c, img: add_img_m, img2: add_img_2, img3: add_img_3, img4: add_img_4 }
                 productsList.splice(vt, 1, item)
                 shop()
                 localStorage.setItem('productsList', JSON.stringify(productsList))
@@ -134,4 +152,88 @@ function suaPrc(x) {
             i++
         }
     })
+}
+
+function deleteImg() {
+    alert("Đã xóa img_Main!")
+    add_img_m = null
+}
+function deleteImg2() {
+    alert("Đã xóa img_2!")
+    add_img_2 = null
+}
+function deleteImg3() {
+    alert("Đã xóa img_3!")
+    add_img_3 = null
+}
+function deleteImg4() {
+    alert("Đã xóa img_4!")
+    add_img_4 = null
+}
+
+function listUser() {
+    document.getElementById('add-product').style.display = "none"
+    document.getElementById('product-management').style.display = "none"
+    document.getElementById('orders-management').style.display = "block"
+    document.getElementById('orders-management').innerHTML = `
+        <div id="orders-admin">
+            <table width:"100%">
+                <thead>
+                    <tr>
+                        <td>ID</td>
+                        <td>CLIENT</td>
+                        <td>TOTAL</td>
+                        <td>DATE</td>
+                        <td>BALANCE</td>
+                        <td>ACTION</td>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>#5033</strong></td>
+                        <td>
+                            <p>
+                                <b>Toan</b>
+                                ngquoctoan2001@gmail.com
+                            </p>
+
+                        </td>
+                        <td>320.000</td>
+                        <td>19 April, 2022</td>
+                        <td class="success">Paid</td>
+                        <td>
+                            <button>
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td><strong>#5033</strong></td>
+                        <td>
+                            <p>
+                                <b>Toan</b>
+                                ngquoctoan2001@gmail.com
+                            </p>
+
+                        </td>
+                        <td>320.000</td>
+                        <td>19 April, 2022</td>
+                        <td class="danger">Unprocess</td>
+                        <td>
+                            <button>
+                                <i class="fa-solid fa-eye"></i>
+                            </button>
+                            <button>
+                                <i class="fa-solid fa-ellipsis-vertical"></i>
+                            </button>
+                        </td>
+                    </tr>
+
+
+                </tbody>
+            </table>
+        </div>`
 }
