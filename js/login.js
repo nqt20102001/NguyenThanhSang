@@ -26,28 +26,30 @@ function eSignup() {
     lg_wr.style.visibility = "visible"
 }
 
-
-
-// Đăng kí
-
 let email_signup = document.getElementById("email_signup");
 let username_signup = document.getElementById("username_signup");
 let password_signup = document.getElementById("password_signup");
 let btnSignup = document.querySelector(".btn-signup");
 
+let email = document.getElementById("email");
+let username = document.getElementById("username");
+let password = document.getElementById("password");
+let btnLogin = document.querySelector(".btn-login");
+
+var userrrList = JSON.parse(localStorage.getItem('userList'))
+
+// Đăng kí
+
 btnSignup.addEventListener("click", (e) => {
-    e.preventDefault();
-    let user = {
-        username: username_signup.value,
-        email: email_signup.value,
-        password: password_signup.value,
-    };
-    let json = JSON.stringify(user);
+    let tk = username_signup.value
+    let mk = email_signup.value
+    let em = password_signup.value
     if (!username_signup.value || !email_signup.value || !password_signup.value) {
         alert("Nhập đầy đủ thông tin!");
     } else {
-        localStorage.setItem(username_signup.value, json);
         alert("Đăng kí thành công!");
+        userrrList.push({ tk: tk, mk: mk, em: em })
+        localStorage.setItem('userList', JSON.stringify(userrrList))
         su_wr.style.visibility = "hidden"
         lg_wr.style.visibility = "visible"
     }
@@ -55,15 +57,9 @@ btnSignup.addEventListener("click", (e) => {
 
 // Đăng nhập
 
-let email = document.getElementById("email");
-let username = document.getElementById("username");
-let password = document.getElementById("password");
-let btnLogin = document.querySelector(".btn-login");
-
 btnLogin.addEventListener("click", (e) => {
-    e.preventDefault();
     let user = {
-        username: username.value,
+        ck: username.value,
         email: email.value,
         password: password.value,
     };
@@ -89,50 +85,50 @@ btnLogin.addEventListener("click", (e) => {
 
 // Dang Xuat
 
-const $ = document.querySelector.bind(document)
-const $$ = document.querySelectorAll.bind(document)
+// const $ = document.querySelector.bind(document)
+// const $$ = document.querySelectorAll.bind(document)
 
-const CURRENT_USER = "currenUser"
-let getUser = JSON.parse(localStorage.getItem(CURRENT_USER) || null)
-let config = JSON.parse(localStorage.getItem(getUser))
+// const CURRENT_USER = "currenUser"
+// let getUser = JSON.parse(localStorage.getItem(CURRENT_USER) || null)
+// let config = JSON.parse(localStorage.getItem(getUser))
 
-if (getUser) {
-    let t1 = document.querySelector('.user')
-    let t2 = document.querySelector('.logout')
-    t1.innerHTML = `
-    <div >
-        <p style="font-size: 1.2rem;">Hey, <b>${getUser}</b></p>
-    </div>
-    `
-    t2.innerHTML = `
-    <li>
-        <button id="btn-logout">
-            <i class="fa-solid fa-right-from-bracket"></i>
-        </button>
-    <style>
-        #navbar li button#btn-logout:hover,
-        #navbar li button#btn-logout.active {
-            color: red;
-        }
+// if (getUser) {
+//     let t1 = document.querySelector('.user')
+//     let t2 = document.querySelector('.logout')
+//     t1.innerHTML = `
+//     <div >
+//         <p style="font-size: 1.2rem;">Hey, <b>${getUser}</b></p>
+//     </div>
+//     `
+//     t2.innerHTML = `
+//     <li>
+//         <button id="btn-logout">
+//             <i class="fa-solid fa-right-from-bracket"></i>
+//         </button>
+//     <style>
+//         #navbar li button#btn-logout:hover,
+//         #navbar li button#btn-logout.active {
+//             color: red;
+//         }
 
-        #navbar li button#btn-logout.active::after,
-        #navbar li button#btn-logout:hover::after {
-            content: "";
-            width: 40%;
-            height: 2px;
-            background-color: red;
-            position: absolute;
-            bottom: -4px;
-            left: 30%;
-        }   
-    </style>
-    </li>   
-    `
-}
+//         #navbar li button#btn-logout.active::after,
+//         #navbar li button#btn-logout:hover::after {
+//             content: "";
+//             width: 40%;
+//             height: 2px;
+//             background-color: red;
+//             position: absolute;
+//             bottom: -4px;
+//             left: 30%;
+//         }
+//     </style>
+//     </li>
+//     `
+// }
 
-let logOutBtn = $(".logout")
+// let logOutBtn = $(".logout")
 
-logOutBtn.onclick = (e) => {
-    localStorage.setItem(CURRENT_USER, null)
-    document.location.reload();
-}
+// logOutBtn.onclick = (e) => {
+//     localStorage.setItem(CURRENT_USER, null)
+//     document.location.reload();
+// }

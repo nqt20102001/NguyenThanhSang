@@ -68,7 +68,7 @@ document.querySelector('.dangNhap').innerHTML = `
                         <input id="password" type="password" placeholder="Password" />
                     </div>
                     <div class="flex-center" style="margin-bottom: 10px;">
-                        <button class="btn btn-login">Sign in</button>
+                        <a class="btn btn-login">Sign in</a>
                     </div>
                     <div class="flex-center">
                         <p>Create your account:</p>
@@ -101,7 +101,7 @@ document.querySelector('.dangNhap').innerHTML = `
                     </div>
                     
                     <div class="flex-center" style="margin-bottom: 10px;">
-                        <button class="btn btn-signup">Sign up</button>
+                        <a class="btn btn-signup">Sign up</a>
                     </div>
                     <div class="flex-center">
                         <p>Already have an account?</p>
