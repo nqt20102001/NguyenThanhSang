@@ -97,7 +97,7 @@ document.querySelector('.dangNhap').innerHTML = `
                         <input id="password_signup" type="password" placeholder="Password" />
                     </div>
                     <div class="input__field">
-                        <input id="password_signup" type="password" placeholder="Confirm Password" />
+                        <input id="password_signup2" type="password" placeholder="Confirm Password" />
                     </div>
                     
                     <div class="flex-center" style="margin-bottom: 10px;">

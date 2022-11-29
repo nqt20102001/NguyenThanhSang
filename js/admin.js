@@ -171,69 +171,40 @@ function deleteImg4() {
     add_img_4 = null
 }
 
+// List user
+
+userrrList = JSON.parse(localStorage.getItem('userList'))
+
 function listUser() {
     document.getElementById('add-product').style.display = "none"
     document.getElementById('product-management').style.display = "none"
     document.getElementById('orders-management').style.display = "block"
-    document.getElementById('orders-management').innerHTML = `
-        <div id="orders-admin">
-            <table width:"100%">
-                <thead>
-                    <tr>
-                        <td>ID</td>
-                        <td>CLIENT</td>
-                        <td>TOTAL</td>
-                        <td>DATE</td>
-                        <td>BALANCE</td>
-                        <td>ACTION</td>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td><strong>#5033</strong></td>
-                        <td>
-                            <p>
-                                <b>Toan</b>
-                                ngquoctoan2001@gmail.com
-                            </p>
 
-                        </td>
-                        <td>320.000</td>
-                        <td>19 April, 2022</td>
-                        <td class="success">Paid</td>
-                        <td>
-                            <button>
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
-                            <button>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td><strong>#5033</strong></td>
-                        <td>
-                            <p>
-                                <b>Toan</b>
-                                ngquoctoan2001@gmail.com
-                            </p>
+    let text = ""
+    userrrList.forEach(product => {
+        text += `
+        <tr>
+            <td><strong>#5033</strong></td>
+            <td>
+                <p>
+                    <b>Toan</b>
+                    ${product.em_dk}
+                </p>
 
-                        </td>
-                        <td>320.000</td>
-                        <td>19 April, 2022</td>
-                        <td class="danger">Unprocess</td>
-                        <td>
-                            <button>
-                                <i class="fa-solid fa-eye"></i>
-                            </button>
-                            <button>
-                                <i class="fa-solid fa-ellipsis-vertical"></i>
-                            </button>
-                        </td>
-                    </tr>
-
-
-                </tbody>
-            </table>
-        </div>`
+            </td>
+            <td>320.000</td>
+            <td>19 April, 2022</td>
+            <td class="success">Paid</td>
+            <td>
+                <button>
+                    <i class="fa-solid fa-eye"></i>
+                </button>
+                <button>
+                    <i class="fa-solid fa-ellipsis-vertical"></i>
+                </button>
+            </td>
+        </tr>
+        `
+    })
+    document.getElementById('table-user').innerHTML = text
 }
