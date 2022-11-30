@@ -184,25 +184,11 @@ function listUser() {
     userrrList.forEach(product => {
         text += `
         <tr>
-            <td><strong>#5033</strong></td>
-            <td>
-                <p>
-                    <b>Toan</b>
-                    ${product.em_dk}
-                </p>
-
-            </td>
-            <td>320.000</td>
-            <td>19 April, 2022</td>
-            <td class="success">Paid</td>
-            <td>
-                <button>
-                    <i class="fa-solid fa-eye"></i>
-                </button>
-                <button>
-                    <i class="fa-solid fa-ellipsis-vertical"></i>
-                </button>
-            </td>
+            <td>${product.tk_dk}</td>
+            <td>${product.mk_dk}</td>
+            <td>${product.em_dk}</td>
+            <td>100.000</td>
+            <td><a>x</a></td>
         </tr>
         `
     })

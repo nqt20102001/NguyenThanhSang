@@ -250,5 +250,6 @@ document.querySelector('#cart-add').innerHTML = `
         </table>
         <button class="btn-totalCart" style="background-color: red;" onclick="emptyCart()">Delete
             Cart</button>
-        <button class="btn-totalCart">Proceed to checkout</button>
-    </div>`
+        <button class="btn-totalCart" onclick="bill()">Proceed to checkout</button>
+    </div>
+    <div id="userBill"></div>`

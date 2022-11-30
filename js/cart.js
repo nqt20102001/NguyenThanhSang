@@ -21,7 +21,8 @@ function addToCart(x) {
         }
 
         alert("Đã thêm.")
-        var productCart = new Array(productImg, productName, productPrice, sl_hienTai)
+        let productCart = { productImg, productName, productPrice, sl_hienTai }
+        // userrrList = [...userrrList[1],productCart]
         arrCart.push(productCart)
         cart()
         localStorage.setItem("arrCart", JSON.stringify(arrCart))
@@ -52,8 +53,9 @@ function cart() {
 
 // ======= TOTAL MONEY CART ========
 
+var totalPrice
 function cartToTal() {
-    var totalPrice = 0
+    totalPrice = 0
     for (var i = 0; i < arrCart.length; i++) {
         let tt = parseInt(arrCart[i][2] * parseInt(arrCart[i][3]))
         totalPrice += tt

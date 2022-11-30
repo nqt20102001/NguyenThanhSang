@@ -37,8 +37,10 @@ let username = document.getElementById("username");
 let password = document.getElementById("password");
 let btnLogin = document.querySelector(".btn-login");
 
-var userrrList = new Array
-JSON.parse(localStorage.getItem('userList'))
+var userrrList = []
+if (localStorage.getItem('userList') !== null) {
+    userrrList = JSON.parse(localStorage.getItem('userList'))
+}
 
 // Đăng kí
 
@@ -49,13 +51,15 @@ btnSignup.addEventListener("click", (e) => {
     let mk2 = password_signup2.value
 
     if (!tk || !mk || !em) {
-        alert("Nhập đầy đủ thông tin!");
+        alert("Nhập đầy đủ thông tin!")
+        return
     } else if (mk === mk2) {
-        alert("Đăng kí thành công!");
+        alert("Đăng kí thành công!")
         userrrList.push({ tk_dk: tk, mk_dk: mk, em_dk: em })
         localStorage.setItem('userList', JSON.stringify(userrrList))
         su_wr.style.visibility = "hidden"
         lg_wr.style.visibility = "visible"
+        return
     }
     else {
         alert("Mật khẩu không hợp lệ!")
@@ -70,22 +74,23 @@ btnLogin.addEventListener("click", (e) => {
     let mk_dn = password.value
     let em_dn = email.value
 
+    userrrList.forEach(product => {
+        if (product.tk_dk === tk_dn && product.mk_dk === mk_dn && product.em_dk === em_dn) {
+            alert("Đăng nhập thành công")
+            localStorage.setItem("currenUser", JSON.stringify(product.tk_dk));
+            window.location.href = "index.html"
+        }
+    })
+
     if (!tk_dn || !mk_dn || !em_dn) {
         alert("Nhập đầy đủ thông tin!");
+        return
     } else if (tk_dn === "admin" && mk_dn === "admin" && em_dn === "admin") {
         alert("Admin!")
         window.location.href = "admin.html"
-    } else {
-        userrrList.forEach(product => {
-            console.log(product.tk_dk);
-            if (product.tk_dk === tk_dn && product.mk_dk === mk_dn && product.em_dk === em_dn) {
-                localStorage.setItem("currenUser", JSON.stringify(product.tk_dk));
-                alert("Đăng nhập thành công")
-                window.location.href = "index.html"
-                return
-            }
-        })
+        return
     }
+
 })
 
 // Dang Xuat
