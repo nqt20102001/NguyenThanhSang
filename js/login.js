@@ -80,6 +80,10 @@ btnLogin.addEventListener("click", (e) => {
             localStorage.setItem("currenUser", JSON.stringify(product.tk_dk));
             window.location.href = "index.html"
         }
+        else {
+            alert("Tài khoản không tồn tại!")
+            return
+        }
     })
 
     if (!tk_dn || !mk_dn || !em_dn) {

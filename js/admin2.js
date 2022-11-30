@@ -45,17 +45,9 @@ document.querySelector('aside').innerHTML = `
             <span class="material-symbols-sharp">inventory</span>
             <h3>Products</h3>
         </a>
-        <a href="">
-            <span class="material-symbols-sharp">add</span>
-            <h3>Add Product</h3>
-        </a>
         <a onclick="listUser()">
             <span class="material-symbols-sharp">person</span>
             <h3>Customers</h3>
-        </a>
-        <a href="">
-            <span class="material-symbols-sharp">receipt_long</span>
-            <h3>Orders</h3>
         </a>
     </div>`
 

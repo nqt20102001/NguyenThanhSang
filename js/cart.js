@@ -21,23 +21,22 @@ function addToCart(x) {
         }
 
         alert("Đã thêm.")
-        let productCart = { productImg, productName, productPrice, sl_hienTai }
-        // userrrList = [...userrrList[1],productCart]
+        let productCart = [productImg, productName, productPrice, sl_hienTai]
         arrCart.push(productCart)
         cart()
         localStorage.setItem("arrCart", JSON.stringify(arrCart))
     }
     else {
         alert("Vui lòng đăng nhập!")
-        // let lg_wr = document.querySelector('.login')
-        // lg_wr.style.visibility = "visible"
+        return
     }
 }
 
 function cart() {
-    let trContent = ""
-    for (let i = 0; i < arrCart.length; i++) {
-        trContent += `
+    if (getUser) {
+        let trContent = ""
+        for (let i = 0; i < arrCart.length; i++) {
+            trContent += `
         <tr>
             <td><img src="${arrCart[i][0]}" alt=""></td>
             <td id="name-product" style="font-weight: 600;">${arrCart[i][1]}</td>
@@ -46,9 +45,10 @@ function cart() {
             <td><button id="remove-product" onclick="xoaSp(this)"><i class="fa-sharp fa-solid fa-circle-xmark"></i></button></td>
         </tr>    
             `
+        }
+        document.querySelector("tbody").innerHTML = trContent
+        cartToTal()
     }
-    document.querySelector("tbody").innerHTML = trContent
-    cartToTal()
 }
 
 // ======= TOTAL MONEY CART ========

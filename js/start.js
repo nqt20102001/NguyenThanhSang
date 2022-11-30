@@ -230,9 +230,7 @@ document.querySelector('#cartt').innerHTML = `
                         <td>Remove</td>
                     </tr>
                 </thead>
-                <tbody>
-                    <!-- Cart here! -->
-                </tbody>
+                <tbody></tbody>
             </table>
         </section>
         <section id="cart-add" class="section-p1"></section>`
@@ -252,4 +250,7 @@ document.querySelector('#cart-add').innerHTML = `
             Cart</button>
         <button class="btn-totalCart" onclick="bill()">Proceed to checkout</button>
     </div>
-    <div id="userBill"></div>`
+    <div id="userBill">
+        Địa Chỉ + Sdt ??
+        bnt Đặt hàng !
+    </div>`

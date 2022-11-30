@@ -20,6 +20,9 @@ shop()
 // Xoa
 
 function xoaPrc(x) {
+    if (confirm("Bạn chắc muốn xóa sản phẩm?") == false) {
+        return
+    }
     let xoa = x.parentElement.parentElement
     let tenSp = xoa.children[1].innerText
     xoa.remove()
@@ -30,8 +33,8 @@ function xoaPrc(x) {
         }
         i++
     })
-
     localStorage.setItem('productsList', JSON.stringify(productsList))
+    document.location.reload();
 }
 
 // Them
@@ -83,6 +86,9 @@ imgInp4.addEventListener("change", function () {
 })
 
 function themPrc() {
+    if (confirm("Bạn chắc muốn thêm sản phẩm?") == false) {
+        return
+    }
     let add_id = document.getElementById('select_type').value
     let add_name = document.getElementById('select_name').value
     let add_price = document.getElementById('select_price').value
@@ -138,6 +144,9 @@ function suaPrc(x) {
             add_img_4 = product.img4
 
             suaPrc2.addEventListener("click", function (e) {
+                if (confirm("Bạn chắc muốn sửa thông tin sản phẩm?") == false) {
+                    return
+                }
                 alert("Cập nhật thành công!")
                 a = document.getElementById('select_type').value
                 b = document.getElementById('select_name').value
@@ -146,6 +155,7 @@ function suaPrc(x) {
                 productsList.splice(vt, 1, item)
                 shop()
                 localStorage.setItem('productsList', JSON.stringify(productsList))
+                document.location.reload();
             })
         }
         else {
@@ -187,10 +197,29 @@ function listUser() {
             <td>${product.tk_dk}</td>
             <td>${product.mk_dk}</td>
             <td>${product.em_dk}</td>
-            <td>100.000</td>
-            <td><a>x</a></td>
+            <td>
+                <a onclick="xoaAcc(this)">x</a>
+            </td>
         </tr>
         `
     })
     document.getElementById('table-user').innerHTML = text
 }
+
+// function xoaAcc(x) {
+//     if (confirm("Bạn chắc muốn xóa tài khoản này?") == false) {
+//         return
+//     }
+//     let xoa = x.parentElement.parentElement
+//     let tenSp = xoa.children[0].innerText
+//     xoa.remove()
+//     let i = 0
+//     userrrList.forEach(product => {
+//         if (tenSp === product.tk_dk) {
+//             userrrList.splice(i, 1)
+//         }
+//         i++
+//     })
+//     localStorage.setItem('userList', JSON.stringify(userrrList))
+//     listUser()
+// }
