@@ -59,9 +59,6 @@ document.querySelector('.dangNhap').innerHTML = `
                 </div>
                 <form>
                     <div class="input__field">
-                        <input id="email" type="text" placeholder="Email" />
-                    </div>
-                    <div class="input__field">
                         <input id="username" type="text" placeholder="User Name" />
                     </div>
                     <div class="input__field">
@@ -74,7 +71,6 @@ document.querySelector('.dangNhap').innerHTML = `
                         <p>Create your account:</p>
                         <a class="signup-link" onclick="eLogin()">Sign up</a>
                     </div>
-                    
                 </form>
             </div>
         </div>
@@ -89,9 +85,6 @@ document.querySelector('.dangNhap').innerHTML = `
                 <form>
                     <div class="input__field">
                         <input id="username_signup" type="text" placeholder="User Name" />
-                    </div>
-                    <div class="input__field">
-                        <input id="email_signup" type="text" placeholder="Email" />
                     </div>
                     <div class="input__field">
                         <input id="password_signup" type="password" placeholder="Password" />
@@ -115,8 +108,7 @@ document.querySelector('.dangNhap').innerHTML = `
     `
 
 document.querySelector('.modal').innerHTML = `
-    <div class="modal-container"></div>
-    `
+    <div class="modal-container"></div> `
 
 document.querySelector('.ft').innerHTML = `
     <div class="logo-main">
@@ -163,7 +155,7 @@ document.querySelector('.ft').innerHTML = `
 
         <div class="copyright">
             <p>Designed by Tuan & Toan Copyright © 2021</p>
-        </div>`
+        </div>  `
 
 document.querySelector('head').innerHTML = `
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
@@ -246,11 +238,8 @@ document.querySelector('#cart-add').innerHTML = `
                 </td>
             </tr>
         </table>
-        <button class="btn-totalCart" style="background-color: red;" onclick="emptyCart()">Delete
-            Cart</button>
-        <button class="btn-totalCart" onclick="bill()">Proceed to checkout</button>
-    </div>
-    <div id="userBill">
-        Địa Chỉ + Sdt ??
-        bnt Đặt hàng !
-    </div>`
+        <button class="btn-totalCart" style="background-color: red;" onclick="emptyCart()">Xóa giỏ hàng</button>
+        <button class="btn-totalCart" onclick="thanhToan()">Thanh toán</button>
+
+        <div id="userBill"></div>
+    </div>  `

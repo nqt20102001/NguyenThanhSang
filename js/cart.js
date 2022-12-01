@@ -64,6 +64,8 @@ function cartToTal() {
 }
 
 xoaSp = (x) => {
+    if (confirm("Xác nhận xóa sản phẩm này khỏi giỏ hàng?") == false)
+        return
     var xoa = x.parentElement.parentElement
     var tenSp = xoa.children[1].innerText
     xoa.remove()
@@ -90,3 +92,46 @@ function khoiTaoCart() {
     cart()
 }
 khoiTaoCart()
+
+function thanhToan() {
+    if (!getUser) {
+        alert("Vui lòng đăng nhập!")
+        return
+    }
+
+    if (arrCart.length != 0) {
+        document.getElementById('userBill').innerHTML = `
+            <div class="acceptBuy">
+                <h2>Thông tin khách hàng</h2><br>
+                <h3>Địa chỉ:</h3>
+                <input type="text" id="dcKh">
+                <h3>Số điện thoại:</h3>
+                <input type="text" id="sdtKh">
+                <br>
+                <button onclick="datHang()">Đặt hàng</button>
+            </div>  `
+    }
+    else {
+        alert("Giỏ hàng rỗng!")
+    }
+}
+
+function datHang() {
+    // check
+    let dc = document.getElementById('dcKh').value
+    let sdt = document.getElementById('sdtKh').value
+    if (!dc || !sdt) {
+        alert("Vui lòng nhập đầy đủ thông tin!")
+        return
+    }
+    if (isNaN(sdt)) {
+        alert("Vui lòng nhập đúng số điện thoại!")
+        return
+    }
+
+    alert("Bạn đã đặt hàng thành công!")
+    document.getElementById('dcKh').value = null
+    document.getElementById('sdtKh').value = null
+    emptyCart()
+    location.reload()
+}

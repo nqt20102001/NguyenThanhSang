@@ -195,13 +195,13 @@ function out(art) {
                                 <input id="sl-product" type="number" min=1 value="1">
                                 <button class="normal" id="btn-add-cart" onclick="addToCart(this)">Add to cart</button>
                                 <ul>
-                                    Product details:
+                                    <h4>Product details</h4>
                                     <li>Material: thick 2-way cotton</li>
                                     <li>Standard form, limit wrinkles</li>
                                     <li>Machine wash does not stretch</li>
                                 </ul>
                                 <ul>
-                                    Methods of preservation:
+                                    <h4>Methods of preservation</h4>
                                     <li>Use less detergent and do not use strong detergents</li>
                                     <li>Do not soak in water for too long</li>
                                     <li>Avoid direct sunlight</li>
@@ -349,10 +349,8 @@ btnSwt.addEventListener('click', sweater)
 var find = document.getElementById("btn-find")
 find.addEventListener("click", function () {
     let dataInputFind = document.getElementById('search-item').value
-    // dataInputFind.lowercase()
 
     let art
-    console.log(dataInputFind);
     if (dataInputFind === "hoodie") {
         hoodie()
     }
@@ -364,9 +362,9 @@ find.addEventListener("click", function () {
     }
     else {
         art = productsList.filter(function (product) {
+            dataInputFind = dataInputFind.toUpperCase()
             return product.name === dataInputFind
         })
         out(art)
     }
-
 })
