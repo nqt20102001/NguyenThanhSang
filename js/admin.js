@@ -119,13 +119,13 @@ function suaPrc(x) {
             document.getElementById('flex-center').innerHTML = `
                 UPDATE PRODUCT`
             document.getElementById('deleteImg').innerHTML = `
-                <p onclick="deleteImg()">x</p>`
+                <p style="justify-content: center; display: flex;"><i onclick="deleteImg()" class="fa-sharp fa-solid fa-circle-xmark"></i></p>`
             document.getElementById('deleteImg2').innerHTML = `
-                <p onclick="deleteImg2()">x</p>`
+                <p style="justify-content: center; display: flex;"><i onclick="deleteImg2()" class="fa-sharp fa-solid fa-circle-xmark"></i></p>`
             document.getElementById('deleteImg3').innerHTML = `
-                <p onclick="deleteImg3()">x</p>`
+                <p style="justify-content: center; display: flex;"><i onclick="deleteImg3()" class="fa-sharp fa-solid fa-circle-xmark"></i></p>`
             document.getElementById('deleteImg4').innerHTML = `
-                <p onclick="deleteImg4()">x</p>`
+                <p style="justify-content: center; display: flex;"><i onclick="deleteImg4()" class="fa-sharp fa-solid fa-circle-xmark"></i></p>`
 
             document.getElementById('select_type').value = product.id
             document.getElementById('select_name').value = product.name
@@ -198,7 +198,7 @@ function listUser() {
             <td>${product.mk_dk}</td>
             <td>${product.em_dk}</td>
             <td>
-                <a onclick="xoaAcc(this)">x</a>
+                <a onclick="xoaAcc(this)"><i class="fa-sharp fa-solid fa-circle-xmark"></i></a>
             </td>
         </tr>
         `
