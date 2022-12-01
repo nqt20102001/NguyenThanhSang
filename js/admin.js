@@ -165,18 +165,30 @@ function suaPrc(x) {
 }
 
 function deleteImg() {
+    if (confirm("Bạn chắc muốn xóa ảnh này?") == false) {
+        return
+    }
     alert("Đã xóa img_Main!")
     add_img_m = null
 }
 function deleteImg2() {
+    if (confirm("Bạn chắc muốn xóa ảnh này?") == false) {
+        return
+    }
     alert("Đã xóa img_2!")
     add_img_2 = null
 }
 function deleteImg3() {
+    if (confirm("Bạn chắc muốn xóa ảnh này?") == false) {
+        return
+    }
     alert("Đã xóa img_3!")
     add_img_3 = null
 }
 function deleteImg4() {
+    if (confirm("Bạn chắc muốn xóa ảnh này?") == false) {
+        return
+    }
     alert("Đã xóa img_4!")
     add_img_4 = null
 }
@@ -206,20 +218,21 @@ function listUser() {
     document.getElementById('table-user').innerHTML = text
 }
 
-// function xoaAcc(x) {
-//     if (confirm("Bạn chắc muốn xóa tài khoản này?") == false) {
-//         return
-//     }
-//     let xoa = x.parentElement.parentElement
-//     let tenSp = xoa.children[0].innerText
-//     xoa.remove()
-//     let i = 0
-//     userrrList.forEach(product => {
-//         if (tenSp === product.tk_dk) {
-//             userrrList.splice(i, 1)
-//         }
-//         i++
-//     })
-//     localStorage.setItem('userList', JSON.stringify(userrrList))
-//     listUser()
-// }
+function xoaAcc(x) {
+    if (confirm("Bạn chắc muốn xóa tài khoản này?") == false) {
+        return
+    }
+    alert("Đã xóa tài khoản này!")
+    let xoa = x.parentElement.parentElement
+    let tenSp = xoa.children[0].innerText
+    xoa.remove()
+    let i = 0
+    userrrList.forEach(product => {
+        if (tenSp === product.tk_dk) {
+            userrrList.splice(i, 1)
+        }
+        i++
+    })
+    localStorage.setItem('userList', JSON.stringify(userrrList))
+    listUser()
+}
