@@ -70,18 +70,6 @@ btnLogin.addEventListener("click", (e) => {
     let tk_dn = username.value
     let mk_dn = password.value
 
-    userrrList.forEach(product => {
-        if (product.tk_dk === tk_dn && product.mk_dk === mk_dn) {
-            alert("Đăng nhập thành công")
-            localStorage.setItem("currenUser", JSON.stringify(product.tk_dk));
-            window.location.href = "index.html"
-        }
-        else {
-            alert("Tài khoản không tồn tại!")
-            return
-        }
-    })
-
     if (!tk_dn || !mk_dn) {
         alert("Nhập đầy đủ thông tin!");
         return
@@ -91,6 +79,19 @@ btnLogin.addEventListener("click", (e) => {
         return
     }
 
+    userrrList.forEach(product => {
+        if (product.tk_dk === tk_dn && product.mk_dk === mk_dn) {
+            alert("Đăng nhập thành công")
+            localStorage.setItem("currenUser", JSON.stringify(product.tk_dk));
+            window.location.href = "index.html"
+        }
+        else {
+            alert("Tài khoản không tồn tại!")
+            document.getElementById("username").focus()
+            document.getElementById("username").value = null
+            return
+        }
+    })
 })
 
 // Dang Xuat

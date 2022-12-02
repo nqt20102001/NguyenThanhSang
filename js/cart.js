@@ -126,6 +126,8 @@ function datHang() {
     }
     if (isNaN(sdt)) {
         alert("Vui lòng nhập đúng số điện thoại!")
+        document.getElementById('sdtKh').focus()
+        document.getElementById('sdtKh').value = null
         return
     }
 
