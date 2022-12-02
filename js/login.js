@@ -35,10 +35,11 @@ let username = document.getElementById("username");
 let password = document.getElementById("password");
 let btnLogin = document.querySelector(".btn-login");
 
-var userrrList = []
-if (localStorage.getItem('userList') !== null) {
-    userrrList = JSON.parse(localStorage.getItem('userList'))
+var userrrList = [{ tk_dk: "user1", mk_dk: "user1" }]
+if (localStorage.getItem('userList') === null) {
+    localStorage.setItem('userList', JSON.stringify(userrrList))
 }
+userrrList = JSON.parse(localStorage.getItem('userList'))
 
 // Đăng kí
 
@@ -47,10 +48,12 @@ btnSignup.addEventListener("click", (e) => {
     let mk = password_signup.value
     let mk2 = password_signup2.value
 
-    if (!tk || !mk) {
+    if (!tk || !mk || !mk2) {
         alert("Nhập đầy đủ thông tin!")
         return
-    } else if (mk === mk2) {
+    }
+
+    if (mk === mk2) {
         alert("Đăng kí thành công!")
         userrrList.push({ tk_dk: tk, mk_dk: mk })
         localStorage.setItem('userList', JSON.stringify(userrrList))
@@ -59,7 +62,9 @@ btnSignup.addEventListener("click", (e) => {
         return
     }
     else {
-        alert("Mật khẩu không hợp lệ!")
+        alert("Nhập lại mật khẩu không hợp lệ!")
+        document.getElementById("password_signup2").focus()
+        document.getElementById("password_signup2").value = null
         return
     }
 })
@@ -73,25 +78,34 @@ btnLogin.addEventListener("click", (e) => {
     if (!tk_dn || !mk_dn) {
         alert("Nhập đầy đủ thông tin!");
         return
-    } else if (tk_dn === "admin" && mk_dn === "admin") {
-        alert("Admin!")
-        window.location.href = "admin.html"
-        return
     }
 
-    userrrList.forEach(product => {
-        if (product.tk_dk === tk_dn && product.mk_dk === mk_dn) {
+    if (tk_dn === "admin" && mk_dn === "admin") {
+        alert("Admin!")
+        window.location.href = "admin.html"
+    }
+    else {
+        let kt = 0
+        let cru
+        userrrList.forEach(product => {
+            if (product.tk_dk === tk_dn && product.mk_dk === mk_dn) {
+                kt = 1
+                cru = tk_dn
+            }
+        })
+        if (kt == 1) {
             alert("Đăng nhập thành công")
-            localStorage.setItem("currenUser", JSON.stringify(product.tk_dk));
+            localStorage.setItem("currenUser", JSON.stringify(cru));
             window.location.href = "index.html"
         }
         else {
             alert("Tài khoản không tồn tại!")
             document.getElementById("username").focus()
             document.getElementById("username").value = null
+            document.getElementById("password").value = null
             return
         }
-    })
+    }
 })
 
 // Dang Xuat

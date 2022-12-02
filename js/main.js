@@ -159,6 +159,8 @@ var btnHoodie = document.querySelector('#btn-hoodies')
 var btnSwt = document.querySelector('#btn-sweaters')
 var giaThap = document.querySelector('#btn-priceT')
 var giaCao = document.querySelector('#btn-priceC')
+var khoangGia1 = document.querySelector('#btn-priceKG1')
+var khoangGia2 = document.querySelector('#btn-priceKG2')
 var art
 
 function out(art) {
@@ -245,7 +247,6 @@ function listPr() {
         renderListPage(totalPages)
         changePage(art)
     })
-
     giaCao.addEventListener("click", function (e) {
         getCurrentPage(1)
         art = productsList.slice();
@@ -255,14 +256,34 @@ function listPr() {
         changePage()
     })
 
+    khoangGia1.addEventListener("click", function (e) {
+        getCurrentPage(1)
+
+        art = productsList.filter(function (product) {
+            return (product.price <= 500.000 && product.price > 0)
+        })
+        totalPages = Math.ceil(art.length / perPage)
+        out(art)
+        renderListPage(totalPages)
+        changePage()
+    })
+    khoangGia2.addEventListener("click", function (e) {
+        getCurrentPage(1)
+
+        art = productsList.filter(function (product) {
+            return (product.price > 500.000)
+        })
+        totalPages = Math.ceil(art.length / perPage)
+        out(art)
+        renderListPage(totalPages)
+        changePage()
+    })
 }
 listPr()
 
 btnAll.addEventListener('click', function (event) {
     listPr()
 })
-
-
 
 function hoodie() {
     getCurrentPage(1)
@@ -281,10 +302,32 @@ function hoodie() {
         renderListPage(totalPages)
         changePage()
     })
-
     giaCao.addEventListener("click", function (e) {
         art = hoodiesList.slice();
         art.sort(function (a, b) { return b.price - a.price })
+        out(art)
+        renderListPage(totalPages)
+        changePage()
+    })
+
+    khoangGia1.addEventListener("click", function (e) {
+        getCurrentPage(1)
+
+        art = hoodiesList.filter(function (product) {
+            return (product.price <= 500.000 && product.price > 0)
+        })
+        totalPages = Math.ceil(art.length / perPage)
+        out(art)
+        renderListPage(totalPages)
+        changePage()
+    })
+    khoangGia2.addEventListener("click", function (e) {
+        getCurrentPage(1)
+
+        art = hoodiesList.filter(function (product) {
+            return (product.price > 500.000)
+        })
+        totalPages = Math.ceil(art.length / perPage)
         out(art)
         renderListPage(totalPages)
         changePage()
@@ -308,10 +351,32 @@ function tshirt() {
         renderListPage(totalPages)
         changePage()
     })
-
     giaCao.addEventListener("click", function (e) {
         art = tshitsList.slice();
         art.sort(function (a, b) { return b.price - a.price })
+        out(art)
+        renderListPage(totalPages)
+        changePage()
+    })
+
+    khoangGia1.addEventListener("click", function (e) {
+        getCurrentPage(1)
+
+        art = tshitsList.filter(function (product) {
+            return (product.price <= 500.000 && product.price > 0)
+        })
+        totalPages = Math.ceil(art.length / perPage)
+        out(art)
+        renderListPage(totalPages)
+        changePage()
+    })
+    khoangGia2.addEventListener("click", function (e) {
+        getCurrentPage(1)
+
+        art = tshitsList.filter(function (product) {
+            return (product.price > 500.000)
+        })
+        totalPages = Math.ceil(art.length / perPage)
         out(art)
         renderListPage(totalPages)
         changePage()
@@ -335,10 +400,32 @@ function sweater() {
         renderListPage(totalPages)
         changePage()
     })
-
     giaCao.addEventListener("click", function (e) {
         art = sweatersList.slice();
         art.sort(function (a, b) { return b.price - a.price })
+        out(art)
+        renderListPage(totalPages)
+        changePage()
+    })
+
+    khoangGia1.addEventListener("click", function (e) {
+        getCurrentPage(1)
+
+        art = sweatersList.filter(function (product) {
+            return (product.price <= 500.000 && product.price > 0)
+        })
+        totalPages = Math.ceil(art.length / perPage)
+        out(art)
+        renderListPage(totalPages)
+        changePage()
+    })
+    khoangGia2.addEventListener("click", function (e) {
+        getCurrentPage(1)
+
+        art = sweatersList.filter(function (product) {
+            return (product.price > 500.000)
+        })
+        totalPages = Math.ceil(art.length / perPage)
         out(art)
         renderListPage(totalPages)
         changePage()
@@ -349,8 +436,8 @@ btnSwt.addEventListener('click', sweater)
 var find = document.getElementById("btn-find")
 find.addEventListener("click", function () {
     let dataInputFind = document.getElementById('search-item').value
-
     let art
+
     if (dataInputFind === "hoodie") {
         hoodie()
     }
@@ -365,6 +452,9 @@ find.addEventListener("click", function () {
             dataInputFind = dataInputFind.toUpperCase()
             return product.name === dataInputFind
         })
+        totalPages = Math.ceil(art.length / perPage)
         out(art)
+        renderListPage(totalPages)
+        changePage(art)
     }
 })

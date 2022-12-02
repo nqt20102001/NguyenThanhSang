@@ -7,9 +7,9 @@ function shop() {
         <tr>
             <td><img src="${product.img}" alt=""></td>
             <td id="name-product">${product.name}</td>
-            <td id="price-product">${product.price}.000</td>
+            <td id="price-product">${product.price}</td>
             <td><button id="remove-product" onclick="xoaPrc(this)"><i class="fa-sharp fa-solid fa-circle-xmark"></i></button></td>
-            <td><button id="update-product" onclick="suaPrc(this)"><i class="fa-solid fa-pen-to-square"></i></button></td>
+            <td><a id="update-product" onclick="suaPrc(this)" href='#'><i class="fa-solid fa-pen-to-square"></i></a></td>
         </tr>
         `
     })
@@ -208,7 +208,6 @@ function listUser() {
         <tr>
             <td>${product.tk_dk}</td>
             <td>${product.mk_dk}</td>
-            <td>${product.em_dk}</td>
             <td>
                 <a onclick="xoaAcc(this)"><i class="fa-sharp fa-solid fa-circle-xmark"></i></a>
             </td>

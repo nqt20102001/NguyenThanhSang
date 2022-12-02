@@ -41,7 +41,7 @@ function cart() {
             <td><img src="${arrCart[i][0]}" alt=""></td>
             <td id="name-product" style="font-weight: 600;">${arrCart[i][1]}</td>
             <td id="price-product">${arrCart[i][2]}</td>
-            <td><input type="number" value="${arrCart[i][3]}"></td>
+            <td><input type="text" value="${arrCart[i][3]}"></td>
             <td><button id="remove-product" onclick="xoaSp(this)"><i class="fa-sharp fa-solid fa-circle-xmark"></i></button></td>
         </tr>    
             `

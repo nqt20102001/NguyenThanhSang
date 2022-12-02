@@ -1,7 +1,7 @@
 var productsList = [
     {
         id: "ts",
-        name: "EGATOR LION",
+        name: "LION",
         price: 320.000,
         img: "./img/tshirts/1.1.jpg",
         img2: "./img/tshirts/1.2.jpg",
@@ -10,7 +10,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR CROCO",
+        name: "CROCO",
         price: 330.000,
         img: "./img/tshirts/2.1.jpg",
         img2: "./img/tshirts/2.2.jpg",
@@ -19,7 +19,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR POPULAR",
+        name: "POPULAR",
         price: 310.000,
         img: "./img/tshirts/3.1.jpg",
         img2: "./img/tshirts/3.2.jpg",
@@ -28,7 +28,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR DINOSAUR",
+        name: "DINOSAUR",
         price: 350.000,
         img: "./img/tshirts/4.1.jpg",
         img2: "./img/tshirts/4.2.jpg",
@@ -37,7 +37,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR LOGO 2.0",
+        name: "LOGO 2.0",
         price: 320.000,
         img: "./img/tshirts/5.1.jpg",
         img2: "./img/tshirts/5.2.jpg",
@@ -46,7 +46,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR FLORAL",
+        name: "FLORAL",
         price: 300.000,
         img: "./img/tshirts/6.1.jpg",
         img2: "./img/tshirts/6.2.jpg",
@@ -55,7 +55,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR BTC",
+        name: "BTC",
         price: 400.000,
         img: "./img/tshirts/7.1.jpg",
         img2: "./img/tshirts/7.2.jpg",
@@ -64,7 +64,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR SHARK",
+        name: "SHARK",
         price: 300.000,
         img: "./img/tshirts/8.1.jpg",
         img2: "./img/tshirts/8.2.jpg",
@@ -73,7 +73,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR MILI",
+        name: "MILI",
         price: 320.000,
         img: "./img/tshirts/9.1.jpg",
         img2: "./img/tshirts/9.2.jpg",
@@ -82,7 +82,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR COCA",
+        name: "COCA",
         price: 335.000,
         img: "./img/tshirts/10.1.jpg",
         img2: "./img/tshirts/10.2.jpg",
@@ -91,7 +91,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR FRIEND",
+        name: "FRIEND",
         price: 370.000,
         img: "./img/tshirts/11.1.jpg",
         img2: "./img/tshirts/11.2.jpg",
@@ -100,7 +100,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR GOD",
+        name: "GOD",
         price: 315.000,
         img: "./img/tshirts/12.1.jpg",
         img2: "./img/tshirts/12.2.jpg",
@@ -109,7 +109,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR LOGO 3.0",
+        name: "LOGO 3.0",
         price: 390.000,
         img: "./img/tshirts/13.1.jpg",
         img2: "./img/tshirts/13.2.jpg",
@@ -118,7 +118,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR LOCAL",
+        name: "LOCAL",
         price: 450.000,
         img: "./img/tshirts/14.1.jpg",
         img2: "./img/tshirts/14.2.jpg",
@@ -127,7 +127,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR PLUS",
+        name: "PLUS",
         price: 345.000,
         img: "./img/tshirts/15.1.jpg",
         img2: "./img/tshirts/15.2.jpg",
@@ -137,7 +137,7 @@ var productsList = [
     },
     {
         id: "ts",
-        name: "EGATOR DOLPHIN",
+        name: "DOLPHIN",
         price: 360.000,
         img: "./img/tshirts/16.1.jpg",
         img2: "./img/tshirts/16.2.jpg",
@@ -146,7 +146,7 @@ var productsList = [
     },
     {
         id: "hd",
-        name: "EGATOR DORAE",
+        name: "DORAE",
         price: 680.000,
         img: "./img/hoodies/1.1.jpg",
         img2: "./img/hoodies/1.2.jpg",
@@ -155,7 +155,7 @@ var productsList = [
     },
     {
         id: "hd",
-        name: "EGATOR ZIPPER",
+        name: "ZIPPER",
         price: 750.000,
         img: "./img/hoodies/2.1.jpg",
         img2: "./img/hoodies/2.2.jpg",
@@ -164,7 +164,7 @@ var productsList = [
     },
     {
         id: "hd",
-        name: "EGATOR CREAM",
+        name: "CREAM",
         price: 420.000,
         img: "./img/hoodies/3.1.jpg",
         img2: "./img/hoodies/3.2.jpg",
@@ -173,7 +173,7 @@ var productsList = [
     },
     {
         id: "hd",
-        name: "EGATOR COLLAB",
+        name: "COLLAB",
         price: 530.000,
         img: "./img/hoodies/4.1.jpg",
         img2: "./img/hoodies/4.2.jpg",
@@ -182,7 +182,7 @@ var productsList = [
     },
     {
         id: "hd",
-        name: "EGATOR MINI",
+        name: "MINI",
         price: 620.000,
         img: "./img/hoodies/5.1.jpg",
         img2: "./img/hoodies/5.2.jpg",
@@ -191,7 +191,7 @@ var productsList = [
     },
     {
         id: "hd",
-        name: "EGATOR MAX",
+        name: "MAX",
         price: 800.000,
         img: "./img/hoodies/6.1.jpg",
         img2: "./img/hoodies/6.2.jpg",
@@ -200,7 +200,7 @@ var productsList = [
     },
     {
         id: "hd",
-        name: "EGATOR TRAVEL",
+        name: "TRAVEL",
         price: 750.000,
         img: "./img/hoodies/7.1.jpg",
         img2: "./img/hoodies/7.2.jpg",
@@ -209,7 +209,7 @@ var productsList = [
     },
     {
         id: "hd",
-        name: "EGATOR TIGER",
+        name: "TIGER",
         price: 720.000,
         img: "./img/hoodies/8.1.jpg",
         img2: "./img/hoodies/8.2.jpg",
@@ -218,7 +218,7 @@ var productsList = [
     },
     {
         id: "st",
-        name: "EGATOR BLACK",
+        name: "BLACK",
         price: 200.000,
         img: "./img/sweater/1.1.jpg",
         img2: "./img/sweater/1.2.jpg",
@@ -227,7 +227,7 @@ var productsList = [
     },
     {
         id: "st",
-        name: "EGATOR GREY",
+        name: "GREY",
         price: 250.000,
         img: "./img/sweater/2.1.jpg",
         img2: "./img/sweater/2.2.jpg",
@@ -236,7 +236,7 @@ var productsList = [
     },
     {
         id: "st",
-        name: "EGATOR OLIVE",
+        name: "OLIVE",
         price: 220.000,
         img: "./img/sweater/3.1.jpg",
         img2: "./img/sweater/3.2.jpg",
@@ -245,7 +245,7 @@ var productsList = [
     },
     {
         id: "st",
-        name: "EGATOR RED",
+        name: "RED",
         price: 240.000,
         img: "./img/sweater/4.1.jpg",
         img2: "./img/sweater/4.2.jpg",

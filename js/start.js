@@ -8,7 +8,7 @@ document.querySelector('#header').innerHTML = `
 
     <div class="search-wrapper">
         <div class="search-main" id="search-main">
-            <input type="text" id="search-item" placeholder="Vd: hoodie, egator lion...">
+            <input type="text" id="search-item" placeholder="Vd: hoodie, croco, lion...">
         </div>
         <button id="btn-find">
             <i class="fa-solid fa-magnifying-glass"></i>
@@ -190,6 +190,8 @@ document.querySelector('#menu-wrapper').innerHTML = `
             <ul>
                     <li id="btn-priceT">Low to High</li>
                     <li id="btn-priceC">High to Low</li>
+                    <li id="btn-priceKG1">0 - 500</li>
+                    <li id="btn-priceKG2">500 - 1000</li>
             </ul>
         </li>
         
