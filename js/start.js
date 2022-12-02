@@ -213,21 +213,23 @@ document.querySelector('#shopp').innerHTML = `
     </nav>`
 
 document.querySelector('#cartt').innerHTML = `
-        <section id="cart" class="section-p1">
-            <table width:"100%">
-                <thead>
-                    <tr>
-                        <td>Image</td>
-                        <td>Product</td>
-                        <td>Price</td>
-                        <td>Quantity</td>
-                        <td>Remove</td>
-                    </tr>
-                </thead>
-                <tbody></tbody>
-            </table>
-        </section>
-        <section id="cart-add" class="section-p1"></section>`
+    <section id="cart" class="section-p1">
+        <table width:"100%">
+            <thead>
+                <tr>
+                    <td>Image</td>
+                    <td>Product</td>
+                    <td>Price</td>
+                    <td>Quantity</td>
+                    <td>Remove</td>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </section>
+    <section id="cart-add" class="section-p1"></section>
+    <h2 id="donHang-content">Các đơn hàng đã đặt</h2>
+    <div id="donHangDaDat"></div>`
 
 document.querySelector('#cart-add').innerHTML = `
     <div id="subtotal">

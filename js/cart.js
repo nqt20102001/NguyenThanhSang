@@ -116,6 +116,12 @@ function thanhToan() {
     }
 }
 
+var bill = []
+if (localStorage.getItem('bill') === null) {
+    localStorage.setItem('bill', JSON.stringify(bill))
+}
+bill = JSON.parse(localStorage.getItem('bill'))
+
 function datHang() {
     // check
     let dc = document.getElementById('dcKh').value
@@ -131,9 +137,30 @@ function datHang() {
         return
     }
 
+    bill.push({ diachi: dc, sdt: sdt, tt: totalPrice, kh: getUser })
+    localStorage.setItem('bill', JSON.stringify(bill))
+
     alert("Bạn đã đặt hàng thành công!")
     document.getElementById('dcKh').value = null
     document.getElementById('sdtKh').value = null
     emptyCart()
     location.reload()
+    dhdd()
+}
+
+function dhdd() {
+    let text = ""
+    bill.forEach(product => {
+        text += `
+        <div class="bill-i">
+            <p>Khách hàng: ${product.kh}</p>
+            <p>Địa chỉ: ${product.diachi}</p>
+            <p>Số điện thoại: ${product.sdt}</p>
+            <p>Tổng tiền: ${product.tt}</p> 
+        </div>  `
+    })
+    document.getElementById('donHangDaDat').innerHTML = text
+}
+if (getUser) {
+    dhdd()
 }

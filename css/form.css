@@ -636,9 +636,33 @@ footer .logo-main {
     padding: 6px 8px;
     font-size: 16px;
 }
+
 .acceptBuy h3 {
     margin-top: 20px;
 }
+
 .acceptBuy button {
     margin-top: 30px;
+}
+
+#donHang-content {
+    margin-left: 100px;
+}
+
+#donHangDaDat {
+    display: block;
+    margin: 0 50px;
+    margin-bottom: 100px;
+}
+.bill-i{
+    margin-top: 40px;
+    color: black;
+    width: 30%;
+    background-color: #a0a0a0;
+    padding: 20px;
+    border: 1px solid black;
+    border-radius: 10px 10px 10px 10px;
+}
+.bill-i p{
+    color: black;
 }
